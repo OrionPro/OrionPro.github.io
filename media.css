@@ -1,0 +1,359 @@
+/*==========  Desktop First Method  ==========*/
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    .menu_navbar {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        right: 0;
+        top: 0;
+    }
+    .menu_navbar ul {
+        margin-right: 0;
+        margin-top: 15%;
+        text-align: center;
+        -webkit-animation-duration: 0.01s;
+        animation-duration: 0.01s;
+    }
+    .menu_navbar ul li {
+        position: relative;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .menu_navbar a:after {
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 42.875em;
+        height: 2.125em;
+        background: rgba(255, 255, 255, 0.27);
+        content: '';
+        -webkit-transition: transform 0.3s;
+        -moz-transition: transform 0.3s;
+        -ms-transform: transform 0.3s;
+        transition: transform 0.3s;
+        -webkit-transform: translate3d(-101%, 0, 0);
+        -moz-transform: translate3d(-101%, 0, 0);
+        -ms-transform: translate3d(-101%, 0, 0);
+        transform: translate3d(-101%, 0, 0);
+    }
+    .menu_navbar a {
+        font-size: 1.4em;
+    }
+    .social_nav {
+        background-color: rgba(18, 38, 21, 0.43);
+        z-index: 10;
+        position: fixed;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+    .middle_section h2,
+    p {
+        text-align: center;
+        color: rgba(0, 0, 0, 1);
+    }
+    .middle_section h2 {
+        color: #fff;
+    }
+    .img-responsive {
+        display: initial;
+    }
+    .anim,
+    .anim_left {
+        background: rgba(249, 249, 249, 0.19);
+    }
+    .promo_block6 p {
+        font-size: 1.6em;
+        margin-top: 95px;
+    }
+    .promo_block3 p {
+        font-size: 2.3em;
+    }
+    .promo_block2 p {
+        font-size: 1.3em;
+        margin-top: 75px;
+    }
+    .promo_block5 p {
+        font-size: 1.8em;
+    }
+    .bottom_section img {
+        display: block;
+        margin: 50px auto;
+        width: 300px;
+    }
+    .bottom_section h3 {
+        margin-left: 0px;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+    .img-responsive {
+        display: initial;
+    }
+    .abel {
+        font: 2.2em "RobotoLight", sans-serif;
+        color: #FFFFFF;
+    }
+    .anim,
+    .anim_left {
+        background: rgba(249, 249, 249, 0.19);
+    }
+    .button {
+        text-align: center;
+    }
+    .button {
+        text-align: center;
+        padding: 3px 12px 3px 5px;
+        font-size: 5px;
+    }
+    .square {
+        top: 6px;
+        right: 4px;
+        width: 5px;
+        height: 5px;
+    }
+    .side {
+        height: 1px;
+    }
+    .side.right,
+    .side.left {
+        width: 1px;
+    }
+    .active .square {
+        -webkit-transform: translate(0, -1px) rotate(-45deg);
+        -ms-transform: translate(0, -1px) rotate(-45deg);
+        transform: translate(0, -1px) rotate(-45deg);
+    }
+    .prev_button,
+    .next_button {
+        top: calc(50% - 55px);
+        font-size: 70px;
+    }
+    .main_head h1 {
+        font: 3em "RobotoBold", sans-serif;
+    }
+    .promo_block {
+        position: absolute;
+        top: 80%;
+        left: 8%;
+        margin: -8em 0 0;
+    }
+    .promo_block p {
+        font-size: 1.9vw;
+    }
+    .promo_block2 p {
+        color: #fff;
+        font-size: 0.8em;
+        margin-top: 5px;
+    }
+    .promo_block2 {
+        top: 90%;
+    }
+    .promo_block3 p {
+        font-size: 1.6em;
+        margin-top: 70px;
+    }
+    .promo_block6 p {
+        font-size: 1.1em;
+        margin-top: 120px;
+    }
+    .promo_block5 p {
+        font-size: 1.2em;
+        margin-top: 90px;
+    }
+    .bottom_section img {
+        display: block;
+        margin: 50px auto;
+        width: 250px;
+    }
+    .bottom_section h3 {
+        margin-left: 0px;
+    }
+    .middle_section h2 {
+        font: 3.5em "RobotoRegular", sans-serif;
+    }
+    .my_work_text {
+        font: 3.5em "RobotoRegular", sans-serif;
+    }
+    .top_section p {
+        font: 2.2em "RobotoRegular", sans-serif;
+        margin-top: 280px;
+    }
+    .top_section {
+        min-height: 1300px;
+    }
+	ul.bot_social {
+    margin-left: 60px;
+	}
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+    .img-responsive {
+        display: initial;
+    }
+    .abel {
+        font: 1.7em "RobotoLight", sans-serif;
+        color: #FFFFFF;
+    }
+    .anim,
+    .anim_left {
+        background: rgba(249, 249, 249, 0.19);
+    }
+    .button {
+        text-align: center;
+        padding: 3px 12px 3px 5px;
+        font-size: 5px;
+    }
+    .square {
+        top: 6px;
+        right: 4px;
+        width: 5px;
+        height: 5px;
+    }
+    .side {
+        height: 1px;
+    }
+    .side.right,
+    .side.left {
+        width: 1px;
+    }
+    .active .square {
+        -webkit-transform: translate(0, -1px) rotate(-45deg);
+        -ms-transform: translate(0, -1px) rotate(-45deg);
+        transform: translate(0, -1px) rotate(-45deg);
+    }
+    .prev_button,
+    .next_button {
+        top: 35%;
+        font-size: 50px;
+    }
+    .main_head h1 {
+        font: 2.6em "RobotoBold", sans-serif;
+    }
+    .an {
+        margin-top: 90px;
+    }
+    .promo_block {
+        position: absolute;
+        left: 10%;
+        top: 100%;
+        width: 80%;
+        margin: -5em 0 0;
+    }
+    .promo_block p {
+        font-size: 2vw;
+    }
+    .promo_block2 p {
+        color: #fff;
+        font-size: 0.6em;
+        margin-top: 20px;
+    }
+    .promo_block2 {
+        top: 105%;
+    }
+    .promo_block3 p {
+        font-size: 0.8em;
+        margin-top: 140px;
+    }
+    .promo_block6 p {
+        font-size: 0.8em;
+        margin-top: 125px;
+    }
+    .promo_block5 p {
+        font-size: 0.8em;
+        margin-top: 115px;
+    }
+    .divider {
+        height: 2px;
+    }
+    .top_section p {
+        font: 2em "RobotoRegular", sans-serif;
+        margin-top: 270px;
+    }
+    .bottom_section img {
+        display: block;
+        margin: 50px auto;
+        width: 200px;
+    }
+    .bottom_section h3 {
+        margin-left: 0px;
+    }
+    .middle_section h2 {
+        font: 2.5em "RobotoRegular", sans-serif;
+    }
+    .description_work {
+        font: 15px "RobotoRegular", sans-serif;
+    }
+    .description_work p {
+        margin-top: 66%;
+    }
+    p.five_work {
+        margin-top: 40%;
+    }
+    .my_work_text {
+        font: 2.5em "RobotoRegular", sans-serif;
+    }
+    .top_section {
+        min-height: 1300px;
+    }
+    .up {
+        top: 60%;
+    }
+	ul.bot_social {
+    margin-left: 55px;
+	}
+}
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {}
+
+
+/*==========  Mobile First Method  ==========*/
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: 320px) {}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 480px) {}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {
+    .menu_navbar {
+        display: block!important;
+    }
+}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {}
