@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>test_work_TrendLine</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="libs/animate/animate.css">
+    <link rel="stylesheet" href="libs/owl.carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="libs/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+    <!-- Здесь пишем код -->
+    <div class="hidden">
+    </div>
+    <div class="loader">
+        <div class="loader_inner"></div>
+    </div>
+    <!-- Header - Основное меню, верхнее меню, регистрация, поиск, кошелёк и категории -->
+    <header class="header">
+        <div class="top_header">
+            <div class="container">
+                <nav class="top_menu">
+                    <ul>
+                        <li>
+                            <a href="#">Про нас</a>
+                        </li>
+                        <li>
+                            <a href="#">Оплата/Доставка</a>
+                        </li>
+                        <li>
+                            <a href="#">Співпраця</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакти</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="news">
+                    <div class="news_one">
+                        <a href="#">Новинний блог</a>
+                    </div>
+                    <div class="news_two">
+                        <a href="#">Безкоштовнi поради</a>
+                    </div>
+                </div>
+                <div class="registration">
+                    <ul>
+                        <li>
+                            <a class="user_enter" href="#">Вхiд</a>
+                        </li>
+                        <li>
+                            <a class="user_reg" href="#">Реестрацiя</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mid_header">
+            <div class="container">
+                <div class="logo">
+                    <a href="#">
+                        <img class="logo_big" src="img/logo.png" height="90" width="260" alt="">
+                        <img class="logo_mobile" src="img/logo_mobile.png" height="53" width="151" alt="">
+                    </a>
+                </div>
+                <div class="search">
+                    <p>+38 (057) 731-96-35</p>
+                    <p>пн.-пт. 9.00 - 18.00 сб.-нд. вихідні</p>
+                    <input class="search_field" type="text">
+                    <a class="search_button" href="#">
+                        <img src="img/loupe.png" height="22" width="23" alt="">
+                    </a>
+                </div>
+                <div class="cart">
+                    <div class="h1">Мiй кошик</div>
+                    <p>Товарiв: <span>2 одиниць</span></p>
+                    <p>На суму: <span>20 000 грн</span></p>
+                </div>
+                <img class="owl" src="img/owl_bg.png" height="137" width="389" alt="owl">
+            </div>
+        </div>
+        <div class="tagline">
+            <div class="container">
+                <h1>Нашi книги для гармонійного розвитку Вашої дитини</h1>
+                <div class="header_social">
+                	<p>Ми завжди поряд</p>
+                    <ul>
+                        <li>
+                            <a class="head_soc_b" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="head_soc_fb" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="head_soc_tw" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="head_soc_inst" href="#"></a>
+                        </li>
+                    </ul>
+                </div>
+                <img class="tagline_bg_mobi_l visible-xs" src="img/tagline_bg_mobi_l.png" height="13" width="19" alt="">
+                <img class="tagline_bg_mobi_r visible-xs" src="img/tagline_bg_mobi_r.png" height="12" width="21" alt="">
+                <ul id="scene" class="hidden-xs">
+                    <li class="layer" data-depth="0.40">
+                        <img class="par_sm_img img-responsive" src="img/par_small_img.png" height="36" width="737" alt="">
+                    </li>
+                    <li class="layer" data-depth="0.50">
+                        <img class="img-responsive" src="img/par_mid_img.png" height="41" width="747" alt="">
+                    </li>
+                    <li class="layer" data-depth="0.90">
+                        <img class="img-responsive" src="img/par_big_img.png" height="40" width="710" alt="">
+                    </li>
+                </ul>
+                
+
+            </div>
+        </div>
+        <!-- Мобильное меню -->
+        <nav class="mobile_mnu hidden-lg hidden-md">
+            <div class="container">
+                <ul class="hidden-lg hidden-md">
+                    <li>
+                        <a class="button_mobile_mnu" href="#">
+                            <img src="img/button_mobile.png" height="17" width="21" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/loupe_mnu_mob.png" height="20" width="21" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/user_mobile.png" height="22" width="18" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/cart_mobile.png" height="22" width="21" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="hidden_category anim1">
+                    <li class="hid_li">
+                        <img src="img/red_heart_cat.png" height="28" width="32" alt="">
+                        <a href="#">Книги про вiдносини</a>
+                    </li>
+                    <li class="hid_li">
+                        <img src="img/green_heart_cat.png" height="27" width="32" alt="">
+                        <a href="#">Книги про здоров'я</a>
+                    </li>
+                    <li class="hid_li">
+                        <img src="img/yellow_heart_cat.png" height="28" width="29" alt="">
+                        <a href="#">Книги про розвиток</a>
+                    </li>
+                    <li class="hid_li">
+                        <img src="img/blue_heart_cat.png" height="29" width="30" alt="">
+                        <a href="#">Книги про добробут</a>
+                    </li>
+                    <li class="hid_li">
+                        <img src="img/orange_heart_cat.png" height="26" width="30" alt="">
+                        <a href="#">Сувенирна продукция</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Категории -->
+        <nav class="category container">
+            <ul>
+                <li>
+                    <img src="img/red_heart_cat.png" height="28" width="32" alt="">
+                    <a href="#">Книги про вiдносини</a>
+                </li>
+                <li>
+                    <img src="img/green_heart_cat.png" height="27" width="32" alt="">
+                    <a href="#">Книги про здоров'я</a>
+                </li>
+                <li>
+                    <img src="img/yellow_heart_cat.png" height="28" width="29" alt="">
+                    <a href="#">Книги про розвиток</a>
+                </li>
+                <li>
+                    <img src="img/blue_heart_cat.png" height="29" width="30" alt="">
+                    <a href="#">Книги про добробут</a>
+                </li>
+                <li>
+                    <img src="img/orange_heart_cat.png" height="26" width="30" alt="">
+                    <a href="#">Сувенирна продукция</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Карусель -->
+    <section class="carousel">
+        <div class="carousel_wrap container">
+            <div class="owl-carousel">
+                <div>
+                    <div class="promo_text">
+                        <p>Груповые творческие занятия</p>
+                    </div>
+                    <img class="img-responsive" src="img/slider1_img.jpg" height="400" width="1200" alt="">
+                </div>
+                <div>
+                    <div class="promo_text2">
+                        <p>Возможны и индивидуальные занятия</p>
+                    </div>
+                    <img class="img-responsive" src="img/slider1_img.jpg" height="400" width="1200" alt="">
+                </div>
+            </div>
+            <div class="customNextBtn">
+                <img class="carousel_arrow_right" src="img/arrow_right.png" height="53" width="58" alt="">
+            </div>
+            <div class="customPrevBtn">
+                <img class="carousel_arrow_left" src="img/arrow_left.png" height="51" width="55" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Продукт -->
+    <section class="product">
+        <div class="container">
+            <div class="book">
+                <img src="img/books_img1.png" height="323" width="218" alt="">
+                <img class="pop-up_img" src="img/novelty_book.png" height="40" width="127">
+            </div>
+            <div class="description_book">
+                <h2>
+                	Такі різні діти. Книга для батьків, яких ніхто не навчав педагогіки 
+               	</h2>
+                <p><span>Автор......</span>А.Гресь</p>
+                <p><span>Серія.......</span>"Для турботливих батьків"</p>
+                <p><span>Вік............ </span>від 0 до 15</p>
+                <div class="annotation">
+                    <p>Батьки зазвичай порівнюють свою дитину з іншими дітьми. Чому Петрик уже вміє читати, а мій Мишко ще ні? Ось Катруся не боїться на уроці відповідати, а ти?.. — такі слова знайомі багатьом батькам. Можливо, краще все-таки не порівнювати, а подумати – у чому унікальність і неповторність вашої дитини.</p>
+                    <p>Ця книга допоможе батькам зрозуміти, як виховувати свою дитину — таку особливу і не схожу на інших.</p>
+                </div>
+                <div class="price">
+                    <span>75 грн.</span>
+                    <a href="#">Переглянути</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Вторая карусель -->
+    <section class="carousel_two">
+        <div class="container">
+            <div class="carousel_wrap2">
+                <div class="owl-carousel2">
+                    <div>
+                        <img class="carousel_pop-up" src="img/popup_img_1.png" height="37" width="93" alt="">
+                        <img src="img/book1.jpg" height="272" width="182" alt="">
+                    </div>
+                    <div>
+                        <img class="carousel_pop-up" src="img/popup_img_2.png" height="37" width="166" alt="">
+                        <img src="img/book2.jpg" height="272" width="182" alt="">
+                    </div>
+                    <div>
+                        <img class="carousel_pop-up" src="img/popup_img_3.png" height="37" width="183" alt="">
+                        <img src="img/book3.jpg" height="272" width="182" alt="">
+                    </div>
+                    <div>
+                        <img class="carousel_pop-up" src="img/popup_img_4.png" height="37" width="183" alt="">
+                        <img src="img/book4.jpg" height="272" width="182" alt="">
+                    </div>
+                    <div>
+                        <img class="carousel_pop-up" src="img/popup_img_5.png" height="37" width="182" alt="">
+                        <img src="img/book5.jpg" height="272" width="182" alt="">
+                    </div>
+                </div>
+                <div class="customNextBtn2">
+                    <img class="arrow_right_carousel2 visible-xs" src="img/arrow_right_carousel2_mobil.png" height="37" width="37" alt="">
+                    <img class="arrow_right_carousel2 hidden-xs" src="img/arrow_right_carousel2.png" height="50" width="50" alt="">
+                </div>
+                <div class="customPrevBtn2">
+                    <img class="arrow_left_carousel2 visible-xs" src="img/arrow_left_carousel2_mobil.png" height="37" width="37" alt="">
+                    <img class="arrow_left_carousel2 hidden-xs" src="img/arrow_left_carousel2.png" height="51" width="50" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  Советы дня -->
+    <section class="advice">
+        <div class="container">
+            <div class="advice_wrap">
+                <div class="advice_wrap_news">
+                    <div class="advice_news">
+                        <h3>Новинний блог</h3>
+                        <span>Такі різні діти</span>
+                        <p>Тут ви знайдете безлыч корисноъ інформацыъ про наших, каких пізних дітей. А ми, в свою чергу, спробуємо допомогти вам їх зрозуміти.</p>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+                <div class="advice_wrap_news2">
+                    <div class="advice_news2">
+                        <h3>Безкоштовнi поради</h3>
+                        <span>смачні вітаміни</span>
+                        <p>У нас є для вас безліч порад. Тут ви знайдете безлыч корисноъ інформацыъ про наших, каких пізних дітей. А ми, в свою чергу, спробуємо допомогти вам їх зрозуміти.</p>
+                        <a href="#">Перейти</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Про нас -->
+    <section class="about_us">
+        <div class="container">
+            <h4>Про наше видавництво</h4>
+            <p>Вас вітає Видавнича група «Основа» — загальновизнаний лідер на ринку науково-методичної літератури й педагогічної преси, досвідчений експерт у питаннях педагогіки, психології й виховання. Нам довіряють понад 120 тисяч освітян, які, рік у рік, передплачують наші журнали.</p>
+            <p>Ми розпочали працювати 2002 року, 26 червня було зареєстровано перші шість журналів. Минали роки, довкола все змінювалось, ми росли та розвивалися, наша віра у свою справу та любов до нашого читача сприяли висуненню нових ідей та надихала робити свою справу ще краще.</p>
+            <p>З 2010 р. Видавнича група «Основа» почала випускати журнали на території Російської федерації.</p>
+            <span>Отже, 2014 року ми випускаємо</span>
+            <div class="we_produce">
+                <div class="block1 col-md-3">
+                    <img src="img/about_us_31l.png" height="91" width="94" alt="">
+                    <p>науково-методичний журнал
+                        <br /> для всіх категорій працівників школи</p>
+                </div>
+                <div class="block2 col-md-3">
+                    <img src="img/about_us_11.png" height="91" width="90" alt="">
+                    <p>пізнавально-розважальних
+                        <br /> журналів для учнів</p>
+                </div>
+                <div class="block3 col-md-3">
+                    <img src="img/about_us_2.png" height="92" width="87" alt="">
+                    <p>журнали
+                        <br /> для батьків</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Партнёры -->
+    <section class="partners">
+        <div class="container">
+            <h5>Партнери</h5>
+            <div class="partners_list container">
+                <div class="col-lg-6 col-md-12">
+                    <div class="col-md-4">
+                        <a class="partners1" href="#"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="partners2" href="#"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="partners3" href="#"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="col-md-4">
+                        <a class="partners4" href="#"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="partners1" href="#"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="partners2" href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="partners_list container">
+                <div class="col-lg-6 col-md-12">
+                    <div class="col-md-4">
+                        <a class="partners3" href="#"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="partners4" href="#"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="partners1" href="#"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="col-md-4">
+                        <a class="partners2" href="#"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="partners3" href="#"></a>
+                    </div>
+                    <div class="col-md-4">
+                        <a class="partners4" href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden_parners">
+                <div class="partners_list container">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="col-md-4">
+                            <a class="partners1" href="#"></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="partners2" href="#"></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="partners3" href="#"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="col-md-4">
+                            <a class="partners4" href="#"></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="partners1" href="#"></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="partners2" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="partners_list container">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="col-md-4">
+                            <a class="partners3" href="#"></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="partners4" href="#"></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="partners1" href="#"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="col-md-4">
+                            <a class="partners2" href="#"></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="partners3" href="#"></a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="partners4" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="button">Дивитися всіх партнерів</button>
+    </section>
+    <!-- Подписка -->
+    <section class="subscription">
+        <div class="container">
+            <div class="subscription_txt col-md-4">
+                <img src="img/bg_subscr1.png" height="110" width="269" alt="">
+                <p class="h5">Підписка</p>
+                <p>Дізнайтесь першими про всі новини</p>
+            </div>
+            <div class="subscription_input col-md-7 col-sm-12">
+                <input type="text" align="middle" placeholder="E-mail">
+                <button type="button" class="subscription_input_button">Підписатись</button>
+                <img src="img/bg_subscr2.png" height="103" width="114" alt="">
+            </div>
+        </div>
+    </section>
+    <!--  футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_wrap">
+                <div class="social col-md-4">
+                    <ul>
+                        <li>
+                            <a class="soc_vk active" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="soc_fb" href="#"></a>
+                        </li>
+                        <li>
+                            <a class="soc_tw" href="#"></a>
+                        </li>
+                    </ul>
+                    <img class="social_vk_big anim2" src="img/social_vk_big.png" height="334" width="271" alt="">
+                    <img class="social_fb_big anim2" src="img/social_fb_big.png" height="346" width="271" alt="">
+                    <img class="social_twit_big anim2" src="img/social_twit_big.png" height="341" width="271" alt="">
+                </div>
+                <div class="our_category col-md-offset-2 col-lg-offset-0 col-md-3">
+                    <p class="h6">Наші розділи</p>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="img/our_category_foot.png" height="32" width="32"> Загальний каталог
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/red_heart_cat.png" height="28" width="32" alt=""> Книги про вiдносини</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/green_heart_cat.png" height="29" width="30" alt=""> Книги про розвиток</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/yellow_heart_cat.png" height="28" width="29" alt=""> Книги про здоровя</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/blue_heart_cat.png" height="29" width="30" alt=""> Книги про добробу</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/orange_heart_cat.png" height="26" width="30" alt=""> Сувенірна продукція</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="information col-md-3">
+                    <p class="h6">Корисна iнформацiя</p>
+                    <ul>
+                        <li>
+                            <a href="#">Про нас</a></li>
+                        <li>
+                            <a href="#">Оплата/Доставка</a></li>
+                        <li>
+                            <a href="#">Новини</a></li>
+                        <li>
+                            <a href="#">Спiвпраця</a></li>
+                        <li>
+                            <a href="#">Контакти</a></li>
+                        <li>
+                            <a href="#">Безкоштовнi поради</a></li>
+                    </ul>
+                </div>
+                <div class="group_links visible-sm visible-xs">
+                    <div class="col-sm-12">
+                        <a href="#">Про нас</a>
+                        <a href="#">Оплата/доставка</a>
+                    </div>
+                    <div class="col-sm-12">
+                        <a class="news_links" href="#">Новиний блог</a>
+                        <a class="free_advices" href="#">Безкоштовні поради</a>
+                    </div>
+                    <div class="col-sm-12">
+                        <a href="#">Співпраця</a>
+                        <a href="#">Контакти</a>
+                    </div>
+                </div>
+                <div class="contacts col-lg-2 col-md-3">
+                    <p class="h6">Контакти</p>
+                    <p>+38 (057) 731-96-35</p>
+                    <span>
+                       	<p>пн.-пт. 9.00 - 18.00
+                        <br /> сб.-нд. вихідні</p>
+                    </span>
+                    <button type="button" class="contacts_button">Поставити питання</button>
+                    <div class="footer_social col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2 visible-sm visible-xs">
+                        <ul>
+                            <li>
+                                <a class="foot_soc_tw" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="foot_soc_fb" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="foot_soc_b" href="#"></a>
+                            </li>
+                            <li>
+                                <a class="foot_soc_inst" href="#"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="animation_bear">
+                    <div class="animation_bear_img">
+                        <img src="img/bear_anim.png" height="124" width="94" alt="">
+                    </div>
+                    <div class="paw_bear">
+                        <img src="img/paw_bear.png" height="27" width="20" alt="">
+                    </div>
+                </div>
+                <div class="animation_sun">
+                    <img class="animation_sun_img" src="img/sun.png" height="66" width="67" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="bottom_logo_wrap">
+            <div class="container">
+                <div class="bottom_logo col-md-4">
+                    <p>Розробка сайту</p>
+                    <div class="logo_footer">
+                        <a href="#">
+                            <img class="hidden-sm hidden-xs" src="img/logo_footer.png" height="34" width="107" alt="">
+                            <img class="visible-sm visible-xs" src="img/logo_footer_mobile.png" height="27" width="81" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+    <script src="libs/jquery/jquery-2.2.3.min.js"></script>
+    <script src="libs/waypoints/waypoints.min.js"></script>
+    <script src="libs/animate/animate-css.js"></script>
+    <script src="libs/plugins-scroll/plugins-scroll.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="libs/owl.carousel/owl.carousel.min.js"></script>
+    <script>
+    // Pretty simple huh?
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+    </script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
