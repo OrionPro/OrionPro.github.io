@@ -1,0 +1,314 @@
+    /*==========  Desktop First Method  ==========*/
+    /* Large Devices, Wide Screens */
+    
+    @media only screen and (max-width: 1200px) {
+        .owl-carousel .owl-stage-outer {
+            padding-left: 0;
+        }
+    }
+    /* Medium Devices, Desktops */
+    
+    @media only screen and (max-width: 992px) {
+        .header_phone {
+            margin: 60px auto;
+        }
+        .pavilion_tree {
+            margin-left: 0px;
+            margin: auto;
+        }
+        .pavilion_one {
+            margin-left: 0px;
+            margin: auto;
+        }
+        .pavilion_two {
+            margin-left: 0px;
+            margin: auto;
+        }
+        .carousel_wrap2 {
+            max-width: 250px;
+        }
+        .pavilion_one:before {
+            display: none;
+        }
+        .pavilion_two:before {
+            display: none;
+        }
+        .divider {
+            display: none;
+        }
+        .choice_our_company_block {
+            margin-right: 0;
+            margin: auto;
+        }
+        .choice_our_company_block:last-child {
+            margin-right: 0;
+            margin: auto;
+        }
+        .first_slider_wrap {
+            max-width: 580px;
+            margin: auto;
+        }
+        .owl-carousel .item {
+            display: none;
+        }
+        .owl-carousel .owl-stage-outer {
+            padding-left: 0px;
+        }
+        .owl-carousel2 .item {
+            right: 11px;
+        }
+        .slider_two_img_bg img {
+            display: none;
+        }
+        .wave_divider {
+            display: none;
+        }
+        .hi-tech_pavilions_block_align {
+            margin-right: 0;
+        }
+        .hi-tech_pavilions_block_txt {
+            margin: auto;
+        }
+        .hi-tech_pavilions_block_img img {
+            max-width: 90%;
+            height: auto;
+        }
+        .hi-tech_b {
+            margin-top: 195px;
+            margin-left: 0;
+        }
+        .price .col-md-3 {
+            width: 70%;
+            float: none;
+            margin: auto;
+        }
+        .price_input {
+            margin-top: 10px;
+            width: 100%;
+        }
+        .price_input_wrap {
+            display: block;
+        }
+        .button_enter_form {
+            margin-top: 10px;
+        }
+        .price .col-md-3 img {
+            top: 20px;
+        }
+        .price .col-md-3:nth-child(2n) img {
+            top: 21px;
+        }
+        .price .col-md-3:nth-child(3n) img {
+            top: 18px;
+        }
+        .bottom_address p {
+            float: none;
+            margin: auto;
+            text-align: center;
+        }
+        .bottom_address p+p {
+            float: none;
+            margin: auto;
+            text-align: center;
+        }
+        .button_enter_form {
+            min-width: 290px;
+            height: 45px;
+        }
+        .footer_btn {
+            float: none;
+            display: block;
+            margin: auto;
+        }
+        .footer .footer_phone span {
+            margin: 10px 0 0 0;
+        }
+    }
+    /* Small Devices, Tablets */
+    
+    @media only screen and (max-width: 768px) {
+        /*Disable Animation on Mobile Devices*/
+        .animated {
+            /*CSS transitions*/
+            -o-transition-property: none !important;
+            -moz-transition-property: none !important;
+            -ms-transition-property: none !important;
+            -webkit-transition-property: none !important;
+            transition-property: none !important;
+            /*CSS transforms*/
+            -o-transform: none !important;
+            -moz-transform: none !important;
+            -ms-transform: none !important;
+            -webkit-transform: none !important;
+            transform: none !important;
+            /*CSS animations*/
+            -webkit-animation: none !important;
+            -moz-animation: none !important;
+            -o-animation: none !important;
+            -ms-animation: none !important;
+            animation: none !important;
+        }
+        .first_slider_wrap {
+            max-width: 276px;
+            margin: auto;
+        }
+        .carousel_arrow_right {
+            right: -24.5%;
+        }
+        .carousel_arrow_left {
+            left: -24.8%;
+        }
+        .slider_two .choice_our_company-divider {
+            margin: auto;
+        }
+        .price h4 {
+            margin-top: 10px;
+            font-size: 19.5px;
+        }
+        .header_text_block {
+            width: 300px;
+            height: 164px;
+            margin: 230px auto 0;
+            position: relative;
+            border: 3px dashed #fcc40f;
+        }
+        .inner_text_block-grey {
+            width: 285px;
+            height: 143px;
+            margin: 7px auto;
+        }
+        .inner_text_block-grey p {
+            padding-top: 12px;
+            text-transform: uppercase;
+            font: 700 19.5px 'HelveticaNeueCyr-Black', sans-serif;
+            color: #fff;
+        }
+        .inner_block_corner {
+            display: none;
+        }
+        .inner_text_block-grey p+p {
+            margin-left: 1px;
+            margin-top: 6px;
+            font: 45px 'HelveticaNeueCyr-Black', sans-serif;
+            color: #fcc40f;
+        }
+        .header h1 {
+            font-size: 17px;
+        }
+        .header_text_block_two {
+            height: 38px;
+            width: 290px;
+            margin: 47px auto 54px;
+        }
+        .header_text_block_two p {
+            padding-top: 4px;
+            font: 13.4px 'HelveticaNeueCyr-Medium', sans-serif;
+        }
+        .bg_drill {
+            display: none;
+        }
+        .header_button {
+            min-width: 300px;
+        }
+        .choice_our_company-divider {
+            width: 205px;
+            margin: auto;
+        }
+        .hi-tech_pavilions_block_img img {
+            max-width: 70%;
+            height: auto;
+        }
+        .hi-tech_pavilions_btn {
+            min-width: 274px;
+        }
+        .hi-tech_pavilions_block_txt {
+            width: 276px;
+            height: 234px;
+            margin: auto;
+        }
+        .divider_dot {
+            display: none;
+        }
+        .hi-tech_pavilions_block_txt p {
+            font-size: 15px;
+        }
+        .hi-tech_pavilions_block_txt p+p {
+            font: 11px/17px 'HelveticaNeueCyr-Roman', sans-serif;
+        }
+        .hi-tech_b {
+            margin-top: 175px;
+            margin-left: 0;
+        }
+        .hi-tech_b_1 {
+            margin-top: 10px;
+            margin-left: 0;
+        }
+        .hi-tech_pavilions_block_wrap {
+            margin-top: 52px;
+        }
+        .price_promo_txt {
+            margin: -12px auto;
+        }
+        .footer .bottom_section span {
+            padding: 0;
+            border: none;
+            text-align: center;
+            margin: 73px auto 0;
+            display: block;
+        }
+        .center-pane {
+            top: 5%;
+            left: calc(50% - 147px);
+        }
+    }
+    /* Extra Small Devices, Phones */
+    
+    @media only screen and (max-width: 480px) {
+        .choice_our_company-divider {
+            width: 105px;
+            margin: 0 0 0 35%;
+        }
+        .carousel_arrow_left {
+            left: -6.8%;
+        }
+        .carousel_arrow_right {
+            right: -7.5%;
+        }
+        .bottom_address p {
+            font-size: 9px;
+        }
+        .center-pane {
+            top: 5%;
+            left: calc(50% - 147px);
+        }
+    }
+    /* Custom, iPhone Retina */
+    
+    @media only screen and (max-width: 320px) {}
+    /*==========  Mobile First Method  ==========*/
+    /* Custom, iPhone Retina */
+    
+    @media only screen and (min-width: 320px) {}
+    /* Extra Small Devices, Phones */
+    
+    @media only screen and (min-width: 480px) {}
+    /* Small Devices, Tablets */
+    
+    @media only screen and (min-width: 768px) {}
+    /* Medium Devices, Desktops */
+    
+    @media only screen and (min-width: 992px) {
+        .owl-carousel2 .owl-stage-outer {
+            padding-left: 4px;
+        }
+    }
+    /* Large Devices, Wide Screens */
+    
+    @media only screen and (min-width: 1200px) {
+        .container {
+            width: 975px;
+        }
+        .first_slider .container {
+            width: 1200px;
+        }
+    }

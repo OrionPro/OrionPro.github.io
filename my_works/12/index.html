@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Тестовое Elite Studio</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="libs/animate/animate.min.css">
+    <link rel="stylesheet" href="libs/owl.carousel/assets/owl.carousel.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script src="libs/modernizr/modernizr.js"></script>
+</head>
+
+<body>
+    <!-- popup - модальное окно-->
+    <div class="popup anim">
+        <div class="center-pane anim">
+            <div class="center-pane-form anim">
+                <p>НАШ МЕНЕДЖЕР СВЯЖЕТСЯ С ВАМИ И ОТВЕТИТ НА ВСЕ ВАШИ ВОПРОСЫ</p>
+                <p>ЗАКАЖИТЕ ОБРАТНЫЙ ЗВОНОК</p>
+                <button type="button" class="btn-close">
+                    <img src="img/popup_btn-close_img.png" height="17" width="17" alt=""></button>
+                <form>
+                    <div class="form-group">
+                        <input type="text" name="username" required class="form-control" placeholder="Ваше имя" maxlength="150">
+                        <img src="img/popup_user_img.png" height="12" width="10" alt="">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" required placeholder="Ваш телефон" class="form-control">
+                        <img src="img/popup_phone_img.png" height="14" width="8" alt="">
+                        <span>*</span>
+                    </div>
+                    <button type="submit" class="btn-send" value="Отправить">Заказать обратный звонок</button>
+                </form>
+                <p>Или позвоните нам:</p>
+                <p>+7 (123) 456-78-90</p>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER - верхняя часть страницы -->
+    <header class="header">
+        <div class="container">
+            <!-- телефон -->
+            <div class="header_phone">
+                <span>+7</span> <span>(123)</span> 456-78-90
+            </div>
+            <!-- блок-обёёртка для текста -->
+            <div class="header_text_block">
+                <div class="inner_block_corner"></div>
+                <!-- блок отображения самого текста слогана  -->
+                <div class="inner_text_block-grey">
+                    <p>качественные беседки</p>
+                    <p>ПОД КЛЮЧ</p>
+                    <p>от ведущих европейских производителей</p>
+                </div>
+            </div>
+            <h1 class="anim">ПРИХОДИ, ПРОБУЙ, ВЫБИРАЙ!</h1>
+            <!-- второй текстовый блок с серым фоном-->
+            <div class="header_text_block_two">
+                <p>Единственный качественный сервис, который умеет удивлять</p>
+            </div>
+            <!-- кнопка в блоке header -->
+            <button class="header_button">
+                Сделать заказ беседки
+            </button>
+            <div class="header_scroll">
+                <a href="#">
+                    <img src="img/header_img_scroll.png" height="51" width="51" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Примеры беседок -->
+    <section class="example_pavilions">
+        <div class="container">
+            <div class="example_pavilions_wrap">
+                <div class="example_pavilions_blocks pavilion_one col-md-4">
+                    <p>Беседка
+                        <br /> «Французская»
+                    </p>
+                    <img src="img/pavilions_img_1.png" height="193" width="195" alt="">
+                    <p>99 990 руб.</p>
+                    <button>Предзаказ</button>
+                </div>
+                <div class="example_pavilions_blocks pavilion_two col-md-4">
+                    <p>Беседка
+                        <br /> «Европейская»
+                    </p>
+                    <img src="img/pavilions_img_2.png" height="200" width="226" alt="">
+                    <p>99 990 руб.</p>
+                    <button>Предзаказ</button>
+                </div>
+                <div class="example_pavilions_blocks pavilion_tree col-md-4">
+                    <p>Беседка
+                        <br /> «Дачная»
+                    </p>
+                    <img src="img/pavilions_img_3.png" height="199" width="232" alt="">
+                    <p>99 990 руб.</p>
+                    <button>Предзаказ</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+        <div class="container">
+            <div class="example_pavilions_wrap2 clearfix">
+                <div class="example_pavilions_blocks pavilion_one col-md-4">
+                    <p>Беседка
+                        <br /> «Французская»
+                    </p>
+                    <img src="img/pavilions_img_1.png" height="193" width="195" alt="">
+                    <p>99 990 руб.</p>
+                    <button>Предзаказ</button>
+                </div>
+                <div class="example_pavilions_blocks pavilion_two col-md-4">
+                    <p>Беседка
+                        <br /> «Европейская»
+                    </p>
+                    <img src="img/pavilions_img_2.png" height="200" width="226" alt="">
+                    <p>99 990 руб.</p>
+                    <button>Предзаказ</button>
+                </div>
+                <div class="example_pavilions_blocks pavilion_tree col-md-4">
+                    <p>Другое
+                        <br /> изделие
+                    </p>
+                    <img src="img/pavilions_img_qest.png" height="205" width="235" alt="">
+                    <p>Под заказ</p>
+                    <button>Предзаказ</button>
+                </div>
+            </div>
+            <div class="wave_divider">
+                <img src="img/pavilions_img_divider_wave.png" height="8" width="856" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="choice_our_company">
+        <div class="container">
+            <h2 class="anim2">Почему выбирают нашу компанию?</h2>
+            <div class="choice_our_company-divider"></div>
+        </div>
+        <div class="container">
+            <div class="choice_our_company_blocks_wrap">
+                <div class="bg_drill">
+                    <img src="img/choice_our_company_bg_drill.png" height="453" width="278" alt="">
+                </div>
+                <div class="col-md-4 choice_our_company_block">
+                    <div class="choice_block_img">
+                        <img src="img/choice_our_company_img1.png" height="131" width="127" alt="">
+                    </div>
+                    <p>Собственное производство</p>
+                    <p>Описание собственного производства таким образом</p>
+                </div>
+                <div class="col-md-4 choice_our_company_block">
+                    <div class="choice_block_img">
+                        <img src="img/choice_our_company_img2.png" height="115" width="107" alt="">
+                    </div>
+                    <p>РАБОТА ПОД
+                        <br /> ключ
+                    </p>
+                    <p>Мы можем сделать для вас
+                        <br /> беседку и обеспечить всем
+                        <br /> необходимым оборудованием</p>
+                </div>
+                <div class="col-md-4 choice_our_company_block">
+                    <div class="choice_block_img">
+                        <img src="img/choice_our_company_img3.png" height="133" width="117" alt="">
+                    </div>
+                    <p>БЫСТРЫЙ СРОК ПРОИЗВОДСТВА
+                    </p>
+                    <p>Мы можем сделать для вас
+                        <br /> беседку и обеспечить всем
+                        <br /> необходимым оборудованием</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="choice_our_company_blocks_wrap2">
+                <div class="col-md-4 choice_our_company_block">
+                    <div class="choice_block_img">
+                        <img src="img/choice_our_company_img4.png" height="81" width="120" alt="">
+                    </div>
+                    <p>БОЛЕЕ 15 лет
+                        <br /> на рынке
+                    </p>
+                    <p>Описание собственного производства таким образом</p>
+                </div>
+                <div class="col-md-4 choice_our_company_block">
+                    <div class="choice_block_img">
+                        <img src="img/choice_our_company_img5.png" height="131" width="82" alt="">
+                    </div>
+                    <p>делаем подготовку основания
+                    </p>
+                    <p>Мы можем сделать для вас
+                        <br /> беседку и обеспечить всем
+                        <br /> необходимым оборудованием</p>
+                </div>
+                <div class="col-md-4 choice_our_company_block">
+                    <div class="choice_block_img">
+                        <img src="img/choice_our_company_img6.png" height="79" width="52" alt="">
+                    </div>
+                    <p>первая беседка построена в 2001 году</p>
+                    <p>Мы можем сделать для вас
+                        <br /> беседку и обеспечить всем
+                        <br /> необходимым оборудованием</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Блок hi-tech_pavilions -->
+    <section class="hi-tech_pavilions">
+        <div class="container">
+            <div class="hi-tech_pavilions_block_wrap clearfix">
+                <div class="divider_dot">
+                    <img src="img/divider_dot.png" height="10" width="83" alt="">
+                </div>
+                <div class="col-md-5 hi-tech_b hi-tech_pavilions_block_align">
+                    <div class="hi-tech_pavilions_block_txt">
+                        <div class="hi-tech_pavilions_block_img">
+                            <img src="img/hi-tech_pavilions_block_img1.png" height="328" width="361" alt="">
+                        </div>
+                        <p>ВЫСОКОТЕХНОЛОГИЧНЫЕ БЕСЕДКИ ТОЛЬКО У НАС!</p>
+                        <p>База отдыха «Торбеево озеро» расположи-
+                            <br /> лась на живописном берегу Торбеевского
+                            <br /> озера, которое находится всего в 64 кило-
+                            <br />метрах от МКАД, на пересечении Ярослав-
+                            <br />ского шоссе и Московского большого
+                            <br /> кольца, близ Сергиева Посада.
+                        </p>
+                    </div>
+                    <button class="hi-tech_pavilions_btn">Сделать заказ беседки</button>
+                </div>
+                <div class="col-md-5 hi-tech_b">
+                    <div class="hi-tech_pavilions_block_txt hi-tech_pavilions_block_txt2">
+                        <div class="hi-tech_pavilions_block_img">
+                            <img src="img/hi-tech_pavilions_block_img2.png" height="331" width="358" alt="">
+                        </div>
+                        <p>ВЫСОКОТЕХНОЛОГИЧНЫЕ БЕСЕДКИ ТОЛЬКО У НАС!</p>
+                        <p>База отдыха «Торбеево озеро» расположи-
+                            <br /> лась на живописном берегу Торбеевского
+                            <br /> озера, которое находится всего в 64 кило-
+                            <br />метрах от МКАД, на пересечении Ярослав-
+                            <br />ского шоссе и Московского большого
+                            <br /> кольца, близ Сергиева Посада.
+                        </p>
+                    </div>
+                    <button class="hi-tech_pavilions_btn">Сделать заказ беседки</button>
+                </div>
+            </div>
+            <div class="wave_divider">
+                <img src="img/pavilions_img_divider_wave.png" height="8" width="856" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Первый слайдер -->
+    <section class="first_slider">
+        <div class="container ">
+            <div class="first_slider_wrap">
+                <div class="owl-carousel">
+                    <div>
+                        <div class="item">
+                        </div>
+                        <img src="img/first_slider_img2.png" height="360" width="273" alt="">
+                    </div>
+                    <div>
+                        <div class="item">
+                        </div>
+                        <img src="img/first_slider_img3.png" height="360" width="274" alt="">
+                    </div>
+                    <div>
+                        <div class="item">
+                        </div>
+                        <img src="img/first_slider_img4.png" height="360" width="274" alt="">
+                    </div>
+                    <div>
+                        <div class="item">
+                        </div>
+                        <img src="img/first_slider_img5.png" height="360" width="274" alt="">
+                    </div>
+                    <div>
+                        <div class="item">
+                        </div>
+                        <img src="img/first_slider_img1.png" height="360" width="274" alt="">
+                    </div>
+                </div>
+                <div class="customNextBtn">
+                    <img class="carousel_arrow_right" src="img/carousel_arrow_right.png" height="52" width="52" alt="">
+                </div>
+                <div class="customPrevBtn">
+                    <img class="carousel_arrow_left" src="img/carousel_arrow_left.png" height="52" width="52" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="slider_two">
+        <div class="container">
+            <h3 class="anim2">Так-же можете приобрести</h3>
+            <div class="choice_our_company-divider"></div>
+            <div class="col-md-3 col-md-offset-1 hidden-xs hidden-sm">
+                <span class="carousel_pop_up_txt">МАНГАЛ</span>
+            </div>
+            <div class="col-md-3">
+                <span class="carousel_pop_up_txt hidden-xs hidden-sm">МАНГАЛ</span>
+            </div>
+            <div class="col-md-3">
+                <span class="carousel_pop_up_txt">МАНГАЛ</span>
+            </div>
+        </div>
+        <div class="container">
+            <div class="carousel_wrap2">
+                <div class="slider_two_img_bg">
+                    <img src="img/slider2_bg.jpg" height="404" width="515" alt="">
+                </div>
+                <div class="owl-carousel2">
+                    <div>
+                        <div class="item">
+                        </div>
+                        <div class="slider_two_item_wrap">
+                            <img src="img/slider_two_img1.png" height="260" width="233" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item">
+                        </div>
+                        <div class="slider_two_item_wrap">
+                            <img src="img/slider_two_img2.png" height="260" width="233" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item">
+                        </div>
+                        <div class="slider_two_item_wrap">
+                            <img src="img/slider_two_img3.png" height="260" width="233" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item">
+                        </div>
+                        <div class="slider_two_item_wrap">
+                            <img src="img/slider_two_img1.png" height="260" width="233" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item">
+                        </div>
+                        <div class="slider_two_item_wrap">
+                            <img src="img/slider_two_img2.png" height="260" width="233" alt="">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item">
+                        </div>
+                        <div class="slider_two_item_wrap">
+                            <img src="img/slider_two_img3.png" height="260" width="233" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="customNextBtn2">
+                    <img class="carousel_arrow2_left" src="img/carousel2_arrow_left.png" height="53" width="52" alt="">
+                </div>
+                <div class="customPrevBtn2">
+                    <img class="carousel_arrow2_right" src="img/carousel2_arrow_right.png" height="53" width="53" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="price">
+        <div class="container">
+            <h4>СКОЛЬКО БУДЕТ СТОИТЬ <br /> ВАША БЕСЕДКА ?</h4>
+            <div class="price_promo_txt">Узнай прямо сейчас:</div>
+            <!-- форма заказа беседки -->
+            <div class="price_form_wrap">
+                <form>
+                    <div class="price_input_wrap">
+                        <div class="col-md-3">
+                            <input class="price_input" type="text" placeholder="Имя*">
+                            <img src="img/price_input_icon_user.png" height="19" width="19" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <input class="price_input" type="text" placeholder="E-mail*">
+                            <img src="img/price_input_icon_e_mail.png" height="17" width="24" alt="">
+                        </div>
+                        <div class="col-md-3">
+                            <input class="price_input" type="text" placeholder="Телефон*">
+                            <img src="img/price_input_icon_e_phone.png" height="23" width="22" alt="">
+                        </div>
+                    </div>
+                    <button class="button_enter_form" type="submit">Сделать заказ беседки</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Карта -->
+    <section class="map">
+    </section>
+    <footer class="footer">
+        <div class="bottom_section">
+            <div class="container">
+                <div class="logo">
+                    <a href="#"><img src="img/footer_logo.png" height="26" width="141" alt=""></a>
+                </div>
+                <span>Беседки "NordStar"</span>
+                <button class="footer_btn">Обратный звонок</button>
+                <div class="footer_phone">
+                	<span>+7 (123) 456-78-90</span>
+                	<span>+7 (123) 456-78-90</span>
+                </div>
+            </div>
+        </div>
+        <address class="bottom_address">
+            <div class="container">
+                <p>Все права защищены г. Москва, ул. Богдана Хмельницкого, 50</p>
+                <p>Разработка и поддержка сайта <a href="#">Melfori.com</a></p>
+            </div>
+        </address>
+    </footer>
+    <!-- скрытые блоки -->
+    <div class="hidden"></div>
+    <!-- preloader -->
+    <div class="loader">
+        <div class="loader_inner"></div>
+    </div>
+    <!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+    <script src="libs/jquery/jquery-1.11.2.min.js"></script>
+    <script src="libs/waypoints/waypoints.min.js"></script>
+    <script src="libs/animate/animate-css.js"></script>
+    <script src="libs/plugins-scroll/plugins-scroll.js"></script>
+    <script src="libs/owl.carousel/owl.carousel.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
