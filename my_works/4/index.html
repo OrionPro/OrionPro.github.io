@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+    <meta charset="UTF-8">
+    <title>4</title>
+    <link rel="stylesheet" href="reset.css">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" lang="ru" content="Стадник Александр">
+	<meta name="viewport" content="width=1100">
+    <!-- jQuery library (served from Google) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!-- bxSlider Javascript file -->
+    <script src="jquery.bxslider.min.js"></script>
+    <!-- bxSlider CSS file -->
+    <link href="jquery.bxslider.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="media.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('.bxslider').bxSlider({
+            mode: 'horizontal',
+            controls: false,
+            nextText: null,
+            prevText: null
+        });
+        $('.bxslider2').bxSlider({
+            mode: 'horizontal',
+            minSlides: 3,
+            maxSlides: 4,
+            moveSlides: 1,
+            slideWidth: 220,
+            slideMargin: 40,
+            pager: false,
+            nextSelector: '#slider-next',
+            prevSelector: '#slider-prev',
+            nextText: '2',
+            prevText: '1'
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="content_logo-menu">
+            <a href="#"><img src="i/logo.png" height="37" width="148" alt=""></a>
+            <nav class="top_menu">
+                <ul class="navigation">
+                    <li>
+                        <a href="">HOME</a>
+                    </li>
+                    <li>
+                        <a href="">ABOUT US</a>
+                    </li>
+                    <li>
+                        <a href="">SERVICES 
+								<img src="i/arrow_down.png" height="5" width="7" alt="">
+							</a>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="#">Web Design</a>
+                            </li>
+                            <li>
+                                <a href="#">Wordpress Design</a>
+                            </li>
+                            <li>
+                                <a href="">Mobile App Devplopment</a>
+                            </li>
+                            <li>
+                                <a href="#">Internet Marketing</a>
+                            </li>
+                            <li>
+                                <a href="#">Social Media Management</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">PORTFOLIO
+								<img src="i/arrow_down.png" height="5" width="7" alt="">
+							</a>
+                    </li>
+                    <li>
+                        <a href="">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="">CONTACT US</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="top_slider">
+        <ul class="bxslider">
+            <li><img src="i/slider_img.png" height="440" width="1000" alt="Image">
+            </li>
+            <li><img src="i/slider_img.png" height="440" width="1000" alt="Image">
+            </li>
+            <li><img src="i/slider_img.png" height="440" width="1000" alt="Image">
+            </li>
+            <li><img src="i/slider_img.png" height="440" width="1000" alt="Image">
+            </li>
+            <li><img src="i/slider_img.png" height="440" width="1000" alt="Image">
+            </li>
+        </ul>
+    </section>
+    <section class="middle_section">
+        <div class="middle_section_wrapp">
+            <div class="block">
+                <img src="i/theme.png" height="40" width="40" alt="">
+                <h2>CLEAN THEME</h2>
+                <p>Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. Duis porta gravida augue sed viverra. Quisque at nulla leo, non aliquet mi.</p>
+                <div class="arrow"></div>
+                <a href="#">Read More</a>
+            </div>
+            <div class="block">
+                <img src="i/responsive_design.png" height="40" width="40" alt="">
+                <h2>RESPONSIVE DESIGN</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod placerat dui et tincidunt. Sed sollicitudin posuere auctor. Phasellus at ultricies nisl. Integer at leo eros.</p>
+                <div class="arrow"></div>
+                <a href="#">Read More</a>
+            </div>
+            <div class="block">
+                <img src="i/fully_layerd.png" height="40" width="40" alt="">
+                <h2>FULLY LAYERD PSD</h2>
+                <p> Phasellus lobortis metus non augue sodales volutpat. Vestibulum sit amet nibh eros, hendrerit venenatis est. In vitae nulla nec purus cursus pretium sed id magna.</p>
+                <div class="arrow"></div>
+                <a href="#">Read More</a>
+            </div>
+            <div class="block">
+                <img src="i/ready_for_coding.png" height="40" width="40" alt="">
+                <h2>READY FOR CODING</h2>
+                <p>Vivamus convallis feugiat mauris sed posuere. Nam rutrum, quam quis euismod commodo, elit est porta quam, non placerat eros neque porta ante. Fusce quis odio urna. </p>
+                <div class="arrow"></div>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper_latest_works">
+        <div class="content_selectors">
+            <p>LATEST WORKS</p>
+        </div>
+        <div class="selectors">
+            <p><span id="slider-prev"></span> <span id="slider-next"></span></p>
+        </div>
+    </section>
+    <section class="wrapper_middle">
+        <div class="middle_slider">
+            <ul class="bxslider2">
+                <li>
+                    <a href="#"><img src="i/img4.png" height="160" width="220" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="i/img3.png" height="160" width="220" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="i/img2.png" height="160" width="220" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="i/img1.png" height="160" width="220" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="i/img1.png" height="160" width="220" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="i/img2.png" height="160" width="220" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="i/img3.png" height="160" width="220" alt="" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="i/img4.png" height="160" width="220" alt="" /></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="testimonials">
+        <div class="testimonials_left">
+            <h3>TESTIMONIALS</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut nulla sapien, at aliquam erat. Sed vitae massa tellus. Aliquam commodo aliquam metus, sed iaculis nibh tempus id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam nec nisi in nisl euismod fringilla.</p>
+            <p>John Travis, CEO, DomainName.com</p>
+        </div>
+        <div class="our_clients_right">
+            <h3>OUR CLIENTS</h3>
+            <img src="i/our_clients.png" height="200" width="479" alt="">
+        </div>
+    </section>
+    <section class="content_download_psd">
+        <p>This is a clean and modern, four column website PSD template. You can code it into a Wordpress website, HTML5 responsive website for your personal or client works. So ahead and download this wonderful PSD template!
+        </p>
+        <button type="button" class="btn-large">DOWNLOAD PSD</button>
+    </section>
+    <footer class="footer">
+        <section class="bot_content">
+            <div class="about_us">
+                <h4>About us</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi euismod placerat dui et tincidunt. Sed sollicitudin posuere auctor. Phasellus at ultricies nisl. Integer at leo eros. Ut nec lorem id orci convallis porta. Donec pharetra neque eu velit dictum molestie. </p>
+            </div>
+            <div class="explore">
+                <h4>Explore</h4>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="connect_with_us">
+                <h4>connect with us</h4>
+                <div class="connect">
+                    <div class="social-btns">
+                        <div>
+                            <a class="social-btn facebook" href="#"></a>
+                        </div>
+                        <div>
+                            <a class="social-btn linkedin" href="#"></a>
+                        </div>
+                    </div>
+                    <div class="social-btns">
+                        <div>
+                            <a class="social-btn dribbble" href="#"></a>
+                        </div>
+                        <div>
+                            <a class="social-btn skype" href="#"></a>
+                        </div>
+                    </div>
+                    <div class="social-btns">
+                        <div>
+                            <a class="social-btn pinterest" href="#"></a>
+                        </div>
+                        <div>
+                            <a class="social-btn share" href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="browse">
+                <h4>Browse</h4>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#">Press & Media</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms of Service</a>
+                        </li>
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contact">
+                <h4>contact us</h4>
+                <span>BisLite Inc.</span>
+                <p>Always Street 265</p>
+                <p>0X - 125 - Canada</p>
+                <p>Phone: 987-6543-210</p>
+                <p>Fax: 987-6543-210</p>
+            </div>
+        </section>
+        <section class="section_footer">
+            <a href="#">
+                <img src="i/logo.png" height="37" width="148">
+            </a>
+            <div class="copyright">
+                <p>© Copyright 2012 - BisLite Inc. All rights reserved. Some free icons used here are created by Brankic1979.com. Client Logos are copyright and trademark of the respective owners / companies.</p>
+            </div>
+        </section>
+    </footer>
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
+</body>
+
+</html>
