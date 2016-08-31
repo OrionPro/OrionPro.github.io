@@ -1,0 +1,965 @@
+*::-webkit-input-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+*:-moz-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+*::-moz-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+*:-ms-input-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {}
+
+body input:required:valid,
+body textarea:required:valid {}
+
+body {
+    font-family: "RobotoRegular", sans-serif;
+    font-size: 16px;
+}
+
+
+/*Загрузчик*/
+
+#wrap {
+    background: none repeat scroll 0 0 #ffffff;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+.loading {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    padding: 0.5em;
+    vertical-align: middle;
+    text-align: center;
+    background-color: transparent;
+    border: 5px solid transparent;
+    border-top-color: #008ED6;
+    border-bottom-color: #008ED6;
+    border-radius: 50%;
+}
+
+.outer {
+    animation: spin 1s infinite;
+}
+
+.inner {
+    animation: spin 1s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+
+/*Шапка сайта. Логотип, социальные сети и меню.*/
+
+header {
+    min-height: 750px;
+    background: url(img/header_bg.jpg) no-repeat top;
+    background-attachment: fixed;
+}
+
+.top_menu {
+    width: 100%;
+    height: 0;
+    background: #fff;
+    position: fixed;
+    z-index: 100;
+    display: none;
+}
+
+.top_menu_open {
+    display: block!important;
+    height: 80px!important;
+}
+
+.top_menu li {
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-right: 25px;
+}
+
+.top_menu li a {
+    color: #323232;
+    font: 700 14px/40px "RalewayBold", sans-serif;
+    text-transform: uppercase;
+}
+
+.top_menu li a:hover {
+    color: #0199e6;
+}
+
+.top_menu ul li a:after {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    opacity: 0;
+    background: #0199e6;
+    content: '';
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-transition: width .25s, opacity .5s;
+    -moz-transition: width .25s, opacity .5s;
+    -ms-transition: width .25s, opacity .5s;
+    -o-transition: width .25s, opacity .5s;
+    transition: width .25s, opacity .5s;
+}
+
+.top_menu ul li a:hover:after {
+    opacity: 1;
+    width: 15px;
+}
+
+.fixed {
+    display: block;
+    height: 70px;
+}
+
+.menu-button {
+    cursor: pointer;
+    width: 46px;
+    height: 46px;
+    border: 3px solid #55c6ff;
+    border-radius: 10px;
+    padding: 1px 8px;
+    position: fixed;
+    right: 25px;
+    top: 100px;
+    z-index: 9998;
+    background: rgba(0, 142, 214, 0.43);
+}
+
+.lineM {
+    background: #fff;
+    width: 24px;
+    height: 2px;
+    margin: 8px 0;
+}
+
+.top_mnu_logo {
+    margin-left: 13px;
+    margin-top: 25px;
+    float: left;
+}
+
+.logo {
+    margin-left: 10px;
+    margin-top: 43px;
+    float: left;
+}
+
+.social {
+    float: right;
+}
+
+.social li {
+    list-style: none;
+    display: inline-block;
+}
+
+.social ul {
+    margin-right: 15px;
+    margin-top: 48px;
+}
+
+.social li a {
+    display: block;
+    width: 26px;
+    height: 26px;
+}
+
+a.facebook:hover {
+    border-radius: 50%;
+    background-color: #3B5998;
+}
+
+a.LinkedIn:hover {
+    border-radius: 50%;
+    background-color: #2CABE2;
+}
+
+a.twitter:hover {
+    border-radius: 50%;
+    background-color: #33B2FF;
+}
+
+.facebook {
+    background: url(img/social.png) no-repeat -3px -3px;
+}
+
+.twitter {
+    background: url(img/social.png) no-repeat -34px -3px;
+}
+
+.LinkedIn {
+    background: url(img/social.png) no-repeat -65px -3px;
+}
+
+header h1 {
+    margin-top: 137px;
+    text-align: center;
+    color: #fff;
+    font: 45px "RalewayMedium", sans-serif;
+    word-spacing: 2px;
+}
+
+header span {
+    color: #0199e6;
+    font: 700 45px "RalewayBold", sans-serif;
+}
+
+header span:nth-child(2n) {
+    color: #fff;
+    font: 700 45px "RalewayBold", sans-serif;
+}
+
+header p {
+    text-align: center;
+    color: #fff;
+    font: 20px/28px "SourceSansProRegular", sans-serif;
+}
+
+header form {
+    padding: 28px 0px 22px 19px;
+}
+
+
+/* форма регистрации на сайте*/
+
+.register_form {
+    margin-top: 50px;
+    margin-left: 116px;
+    padding: 0;
+    background: rgba(000, 000, 000, .5);
+    height: 100px;
+    width: 940px;
+}
+
+.register_form .input_txt {
+    background-color: rgba(000, 000, 000, 1);
+    padding-left: 20px;
+    margin-right: 20px;
+    width: 215px;
+    height: 50px;
+    font: 16px "SourceSansProRegular", sans-serif;
+    border-radius: 3px;
+    border: 1px #b2e0f7 solid;
+    border-left: 4px #0199e6 solid;
+}
+
+.input_txt::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.register_form .button_enter_form {
+    border: 0;
+    border-radius: 3px;
+    text-transform: uppercase;
+    background-color: #008ed6;
+    color: #fff;
+    opacity: 1;
+    width: 180px;
+    height: 50px;
+    font: 600 15px "RalewayBold", sans-serif;
+}
+
+.register_form .button_enter_form:hover {
+    background-color: #55C6FF;
+}
+
+.register_form p {
+    margin: 27px 0 0 345px;
+    color: rgba(255, 255, 255, 0.5);
+    font: 15px "SourceSansProRegular", sans-serif;
+    word-spacing: 2px;
+}
+
+.register_form p:after {
+    content: "";
+    background: url(img/arrow_header.png);
+    display: block;
+    width: 35px;
+    height: 35px;
+    margin-left: 416px;
+    margin-top: -34px;
+}
+
+
+/* Секция Explore the awesomeness */
+
+.content {
+    min-height: 625px;
+}
+
+.content img {
+    float: left;
+    margin-top: 100px;
+    margin-left: 15px;
+}
+
+.content_txt {
+    margin-top: 72px;
+    float: right;
+}
+
+.content_txt h2 {
+    color: #323232;
+    font: 35px "RalewayBold", sans-serif;
+}
+
+.divider {
+    height: 1px;
+    width: 65px;
+    background: #0199e6;
+}
+
+.content_txt p {
+    color: #717171;
+    font: 15px/25px "SourceSansProRegular", sans-serif;
+    margin-top: 27px;
+}
+
+.icon {
+    float: left;
+}
+
+.icon img {
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+.text_news {
+    float: left;
+    width: 460px;
+}
+
+.text_news span {
+    color: #323232;
+    font: 600 16px "RalewayBold", sans-serif;
+    margin-left: 17px;
+}
+
+.text_news p {
+    margin-top: 6px;
+    margin-left: 18px;
+}
+
+.features {
+    margin-top: 37px;
+}
+
+.features2 {
+    margin-top: 28px;
+}
+
+
+/* Секция about product*/
+
+.content_about_product {
+    background: #f7f8fa;
+    min-height: 650px;
+}
+
+.content_txt_about_product {
+    float: left;
+}
+
+.content_txt_about_product h2 {
+    color: #323232;
+    font: 35px "RalewayBold", sans-serif;
+}
+
+.content_txt_about_product p {
+    color: #717171;
+    font: 15px/25px "SourceSansProRegular", sans-serif;
+    margin-top: 27px;
+}
+
+.content_txt_about_product {
+    margin-top: 70px;
+}
+
+.content_txt_about_product .text_news p {
+    margin-top: 6px;
+    margin-left: 18px;
+}
+
+.img_product {
+    float: right;
+    margin: 98px 0px 0px 38px;
+}
+
+
+/* Секция landx features */
+
+.landx_features {
+    text-align: center;
+    min-height: 850px;
+}
+
+.landx_features_txt h3 {
+    color: #323232;
+    font: 35px "RobotoMedium", sans-serif;
+    margin-top: 75px;
+    margin-bottom: 17px;
+}
+
+.divider2 {
+    margin: auto;
+    height: 1px;
+    width: 65px;
+    background: #0199e6;
+}
+
+.landx_features_txt {
+    color: #727272;
+    font: 17px "SourceSansProRegular", sans-serif;
+}
+
+.feature_boxes {
+    margin-top: 40px;
+}
+
+.feature_box img {
+    text-align: center;
+}
+
+.feature_box span {
+    font: 600 20px "RalewayBold", sans-serif;
+}
+
+.feature_box p+p {
+    margin-top: 32px;
+}
+
+.feature_box p+p+p {
+    font: 16px/23px "SourceSansProRegular", sans-serif;
+    margin-top: 18px;
+}
+
+.landx_features .feature_boxes:nth-child(odd) {
+    margin-top: 50px;
+}
+
+
+/* Секция Pricing Table */
+
+.pricing_table_box {
+    margin-top: 50px;
+}
+
+.basic_box .col-md-4 {
+    padding: 0;
+    margin-right: 30px;
+    margin-left: 14px;
+}
+
+.premium_box .col-md-4 {
+    padding: 0;
+    margin-right: 30px;
+}
+
+.ultimate_box .col-md-4 {
+    padding: 0;
+    margin: 0;
+}
+
+.pricing_table {
+    margin-top: -25px;
+    background: #f7f8fa;
+    text-align: center;
+    min-height: 850px;
+}
+
+.pricing_table h4 {
+    color: #323232;
+    font: 35px "RobotoMedium", sans-serif;
+    margin-top: 100px;
+    margin-bottom: 17px;
+}
+
+.table_box {
+    background: #fff;
+    border: 1px #e5e5e5 solid;
+    height: 475px;
+    width: 360px;
+}
+
+.box_head {
+    height: 100px;
+    background: #323232;
+}
+
+.box_head p {
+    padding-top: 21px;
+    color: #fff;
+    margin: 0;
+    font: 24px "RalewayBold", sans-serif;
+}
+
+.box_head p+p {
+    padding-top: 8px;
+    font: 16px "SourceSansProRegular", sans-serif;
+}
+
+.box_head span {
+    color: #0199e6;
+    font-weight: 600;
+}
+
+.pricing_table_box ul li {
+    text-align: left;
+    list-style: none;
+    height: 50px;
+    padding: 17px 30px;
+    line-height: 20px;
+    border-bottom: 1px #e3e3e3 dotted;
+}
+
+.table_box ul span {
+    font-weight: 600;
+    padding-left: 189px;
+}
+
+.pricing_table_box ul {
+    padding: 0;
+    margin: 0;
+}
+
+.table_ok {
+    background: url(img/img_ok_tab.png) no-repeat 309px 19px;
+}
+
+.table_not {
+    background: url(img/img_not_tab.png) no-repeat 310px 21px;
+}
+
+.permon p {
+    text-align: left;
+    margin: 28px 25px 0px 30px;
+    font: 18px "RalewayBold", sans-serif;
+}
+
+.permon sub {
+    font-size: 17px;
+    bottom: -0.0em;
+}
+
+.table_btn {
+    position: absolute;
+    top: 417px;
+    right: 35px;
+    margin: 2px;
+    padding: 10px 17px 10px;
+    background: inherit;
+    color: #727272;
+    border: 1px solid #717171;
+    border-radius: 4px / 4px 4px 4px 4px;
+    font: 16px "RalewayBold", sans-serif;
+}
+
+
+/* Секция watch video */
+
+.watch_video {
+    text-align: center;
+    min-height: 970px;
+}
+
+.watch_video h5 {
+    color: #323232;
+    font: 35px "RobotoMedium", sans-serif;
+    margin-top: 100px;
+    margin-bottom: 17px;
+}
+
+.video_img {
+    margin-top: 54px;
+}
+
+.watch_icon p {
+    font: 18px "RalewayBold", sans-serif;
+}
+
+.watch_icon {
+    margin-top: 28px;
+}
+
+.watch_icon:nth-of-type(2n+1) {
+    padding-right: 27px;
+}
+
+.watch_icon:nth-of-type(1) {
+    padding-left: 64px;
+}
+
+.i_users {
+    background: url(img/img_watch_icon_users.png) no-repeat 41px 18px;
+}
+
+.i_doc {
+    background: url(img/img_watch_icon_doc.png) no-repeat 72px 16px;
+}
+
+.i_chat {
+    background: url(img/img_watch_icon_chat.png) no-repeat 28px 18px;
+}
+
+
+/* Секция product screenshots */
+
+.product_carousel {
+    margin-left: 0;
+    margin-top: 55px;
+}
+
+.product_screenshots {
+    background: #f7f8fa;
+    min-height: 675px;
+    text-align: center;
+}
+
+.title {
+    color: #323232;
+    font: 35px "RobotoMedium", sans-serif;
+    margin-top: 103px;
+    margin-bottom: 17px;
+}
+
+.owl-dots {
+    height: 20px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 5px 7px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    background: #99ccff;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: #0199e6;
+}
+
+.owl-theme .owl-dots .owl-dot {
+    display: inline-block;
+    zoom: 1;
+}
+
+.owl-theme .owl-nav.disabled + .owl-dots {
+    margin-top: 35px;
+}
+
+
+/* Секция  trusted by */
+
+.trusted_by {
+    text-align: center;
+    min-height: 800px;
+}
+
+.our_brands {
+    margin-top: 40px;
+}
+
+.our_brands li {
+    display: inline-block;
+    margin-right: 45px;
+}
+
+.our_brands li+li+li+li {
+    margin-right: 50px;
+}
+
+.our_brands li+li img {
+    margin-top: -7px;
+}
+
+.trusted_by_quote {
+    margin-top: 80px;
+}
+
+.by_quote {
+    height: 225px;
+    width: 360px;
+    padding: 0;
+    margin-right: 12px;
+    margin-left: 17px;
+    background-color: #f7f8fa;
+    border-bottom: 2px solid #e5e5e5;
+}
+
+.quote_arrow {
+    background: url(img/quote_arrow.png) 0 0 no-repeat;
+    position: absolute;
+    display: block;
+    height: 45px;
+    width: 45px;
+    top: -25px;
+    left: 160px;
+}
+
+.cssarrow {
+    position: relative;
+    background: #f7f8fa;
+}
+
+.cssarrow:after,
+.cssarrow:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.cssarrow:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #f7f8fa;
+    border-width: 15px;
+    margin-left: -15px;
+}
+
+.cssarrow:before {
+    border-color: rgba(194, 225, 245, 0);
+    border-top-color: #e5e5e5;
+    border-width: 18px;
+    margin-left: -18px;
+}
+
+.by_quote p {
+    text-align: center;
+    font: 16px/25px 'SourceSansProIt', Arial, sans-serif;
+    margin-top: 45px;
+    margin-left: 12px;
+}
+
+.autor_quote {
+    margin-top: 36px;
+    margin-left: 27px;
+}
+
+.autor_quote span {
+    color: #0199e6;
+    font: 600 16px "SourceSansProRegular", Arial, sans-serif;
+}
+
+.autor_quote p {
+    margin-top: 3px;
+    margin-left: 1px;
+    color: #9f9f9f;
+    font: 13px "SourceSansProRegular", Arial, sans-serif;
+}
+
+
+/* Секция We are help */
+
+.We_are_help {
+    text-align: center;
+    min-height: 450px;
+    background: url(img/help_you_bg.jpg) no-repeat top;
+}
+
+.We_are_help p {
+    margin: 0px;
+    padding-top: 140px;
+    color: #ffffff;
+    font: 20px "RalewayBold", sans-serif;
+}
+
+.title2 {
+    margin: 0px;
+    padding-top: 20px;
+    color: #ffffff;
+    font: 35px "RalewayBold", sans-serif;
+}
+
+.We_are_help .button_get_started {
+    width: 183px;
+    height: 53px;
+    text-align: left;
+    margin-top: 46px;
+    padding-left: 33px;
+    border: 0;
+    border-radius: 3px;
+    text-transform: uppercase;
+    color: #fff;
+    font: 600 16px "RalewayBold", sans-serif;
+}
+
+.We_are_help .button_get_started {
+    background: #008ed6 url(img/help_you_arrow.png) 147px 20px no-repeat;
+}
+
+.We_are_help .button_get_started:hover {
+    background-color: #55C6FF;
+}
+
+
+/* Секция CONTACT US NOW */
+
+.question_contact {
+    padding-top: 80px;
+    text-align: center;
+    min-height: 225px;
+}
+
+.question_contact img {
+    margin-top: -6px;
+    margin-right: 7px;
+}
+
+.question_contact p {
+    margin-bottom: 22px;
+    margin-top: 0;
+    color: #323232;
+    font: 400 24px "RalewayBold", sans-serif;
+}
+
+.question_contact span {
+    color: #008ed6;
+    font: 600 18px "RalewayBold", sans-serif;
+}
+
+
+/* Футер*/
+
+footer {
+    position: relative;
+    min-height: 285px;
+    text-align: center;
+    background-color: #f7f8fa;
+}
+
+footer p {
+    padding-top: 3px;
+    font: 16px "SourceSansProRegular", sans-serif;
+}
+
+footer ul {
+    margin-left: -3px;
+}
+
+.logo_bottom {
+    padding: 80px 3px 0px 8px;
+}
+
+.social_bottom ul li {
+    display: inline-block;
+}
+
+.social_bottom li a {
+    position: relative;
+    bottom: 0;
+    -webkit-transition: bottom 0.5s ease;
+    -moz-transition: bottom 0.5s ease;
+    -o-transition: bottom 0.5s ease;
+    transition: bottom 0.5s ease;
+    display: block;
+    width: 27px;
+    height: 27px;
+    opacity: 0.7;
+}
+
+.social_bottom li a:hover {
+    bottom: 5px;
+    opacity: 1;
+}
+
+.facebook_bot {
+    background: url(img/footer_social_sprite.png) no-repeat 0px 0px;
+}
+
+.twitter_bot {
+    background: url(img/footer_social_sprite.png) no-repeat -30px 0px;
+}
+
+.Pinterest_bot {
+    background: url(img/footer_social_sprite.png) no-repeat -62px 0px;
+}
+
+.google_bot {
+    background: url(img/footer_social_sprite.png) no-repeat -92px 0px;
+}
+
+.Instagram_bot {
+    background: url(img/footer_social_sprite.png) no-repeat -124px 0px;
+}
+
+.LinkedIn_bot {
+    background: url(img/footer_social_sprite.png) no-repeat -155px 0px;
+}
+
+.social_bottom {
+    margin-left: -37px;
+    margin-top: 19px;
+}
+
+a.facebook_bot:hover {
+    background: url(img/footer_social_sprite_hover.png) no-repeat 0px 0px;
+}
+
+a.LinkedIn_bot:hover {
+    background: url(img/footer_social_sprite_hover.png) no-repeat -155px 0px;
+}
+
+a.twitter_bot:hover {
+    background: url(img/footer_social_sprite_hover.png) no-repeat -30px 0px;
+}
+
+a.google_bot:hover {
+    background: url(img/footer_social_sprite_hover.png) no-repeat -92px 0px;
+}
+
+a.Instagram_bot:hover {
+    background: url(img/footer_social_sprite_hover.png) no-repeat -124px 0px;
+}
+
+a.Pinterest_bot:hover {
+    background: url(img/footer_social_sprite_hover.png) no-repeat -62px 0px;
+}

@@ -1,0 +1,264 @@
+/*==========  Desktop First Method  ==========*/
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (max-width: 1200px) {
+    .register_form {
+        min-height: 100px;
+        width: 100%;
+        margin: 0 auto;
+        height: inherit;
+    }
+    .premium_box .col-md-4,
+    .ultimate_box .col-md-4,
+    .basic_box .col-md-4 {
+        margin-left: 0;
+        margin-right: 0;
+        margin: 10px auto;
+        float: none;
+    }
+    .i_doc {
+        background: url(img/img_watch_icon_doc.png) no-repeat 40px 16px;
+    }
+    .i_chat {
+        background: url(img/img_watch_icon_chat.png) no-repeat 10px 18px;
+    }
+    .content {
+        text-align: center;
+    }
+    .content .col-md-6 {
+        float: none;
+        margin: auto;
+    }
+    .text_news {
+        margin: auto;
+        float: none;
+    }
+    .content img {
+        float: none;
+        margin: 20px auto;
+    }
+    .content_about_product .col-md-6 {
+        float: none;
+        margin: auto;
+    }
+    .content_about_product {
+        text-align: center;
+    }
+    .content_about_product img {
+        float: none;
+        margin: 20px auto;
+    }
+    .divider {
+        margin: auto;
+    }
+    .features .icon,
+    .features2 .icon {
+        float: none;
+    }
+    .text_news span {
+        margin-left: 0;
+    }
+    .content_txt_about_product .text_news p {
+        margin-top: 6px;
+        margin-left: 0;
+    }
+    .autor_quote p {
+        margin-top: 3px;
+    }
+    .autor_quote {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    .trusted_by_quote {
+        margin-bottom: 80px;
+    }
+    .trusted_by_quote .col-md-4 {
+        float: none;
+        margin: 100px auto 0;
+    }
+    .autor_quote .col-md-10 {
+        width: 100%;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (max-width: 992px) {
+    .register_form {
+        min-height: 100px;
+        width: 100%;
+        margin: 0 auto;
+        height: inherit;
+    }
+    .register_form p {
+        display: none;
+    }
+    .register_form .input_txt {
+        width: 100%;
+    }
+    .register_form .button_enter_form {
+        margin-top: 20px;
+    }
+    header form {
+        padding: 10px;
+        text-align: center;
+    }
+    .features img {
+        display: block;
+    }
+    .img_product {
+        margin: 0 auto;
+    }
+    .trusted_by_quote {
+        text-align: center;
+        text-align: -webkit-center;
+    }
+    .watch_icon:nth-of-type(1) {
+        padding-left: 0px;
+    }
+    .watch_icon:nth-of-type(2n+1) {
+        padding-right: 0px;
+    }
+    .i_doc {
+        background: url(img/img_watch_icon_doc.png) no-repeat 40px 0px;
+    }
+    .i_chat {
+        background: url(img/img_watch_icon_chat.png) no-repeat 40px 0px;
+    }
+    .i_users {
+        background: url(img/img_watch_icon_users.png) no-repeat 41px 0px;
+    }
+    .by_quote p {
+        margin-top: 90px;
+        padding-top: 20px;
+    }
+    .by_quot {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .autor_quote {
+        margin-top: 70px;
+    }
+    .autor_quote p {
+        margin-top: -20px;
+        margin-left: 0;
+    }
+    .autor_quote span {
+        margin-top: 40px;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (max-width: 768px) {
+    .register_form {
+        min-height: 100px;
+        width: 100%;
+    }
+    .top_menu li a {
+        font: 700 9px/40px "RalewayBold", sans-serif;
+    }
+    .top_mnu_logo {
+        display: none;
+    }
+    .register_form p {
+        display: none;
+    }
+    .top_menu li {
+        margin-right: 35px;
+    }
+}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px) {
+    .text_news {
+        max-width: 270px;
+    }
+    .table_box ul span {
+        padding-left: 110px;
+    }
+    .table_ok {
+        background: url(img/img_ok_tab.png) no-repeat 255px 19px;
+    }
+    .table_box {
+        max-width: 289px;
+    }
+    .table_not {
+        background: url(img/img_not_tab.png) no-repeat 255px 21px;
+    }
+    .top_menu li a {
+        font: 700 7px/40px "RalewayBold", sans-serif;
+    }
+    .top_menu li {
+        position: relative;
+        display: inline-block;
+        float: none;
+        margin-right: 5px;
+    }
+    .menu-button {
+        right: 15%;
+        top: 85px;
+    }
+    .table_btn {
+        right: 20px;
+    }
+    .our_brands li {
+        margin-bottom: inherit;
+    }
+}
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 320px) {
+    .menu-button {
+        right: 20%;
+    }
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+
+/* iphone4*/
+
+@media only screen and (min-width: 450px) {
+    .menu-button {
+        right: 10%;
+    }
+}
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (min-width: 320px) {}
+
+
+/* Extra Small Devices, Phones */
+
+@media only screen and (min-width: 480px) {}
+
+
+/* Small Devices, Tablets */
+
+@media only screen and (min-width: 768px) {
+    .menu-button {
+        right: 25px;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@media only screen and (min-width: 992px) {}
+
+
+/* Large Devices, Wide Screens */
+
+@media only screen and (min-width: 1200px) {}
