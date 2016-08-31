@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>HTML-test</title>
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="media.css" />
+</head>
+
+<body>
+    <div class="popup">
+        <div class="center-pane">
+            <div class="center-pane-form">
+                <span>Связаться с нами</span>
+                <button type="button" class="btn-close"><img src="img/btn-close.png" height="19" width="19" alt=""></button>
+                <form method="post" action="/login/">
+                    <div class="form-g
+roup">
+                        <label class=" required-field">Тема</label>
+                        <input type="text" name="username" required id="id_username" class="form-control" maxlength="150">
+                    </div>
+                    <div class="form-group">
+                        <label class=" required-field">Сообщение</label>
+                        <input type="text" name="text" required class="form-control-text">
+                    </div>
+                    <button type="submit" class="btn-send" value="Отправить">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <h1>Тестовое задание</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-default">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Завтрак</a>
+                        </div>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#" class="active">Поздний завтрак</a></li>
+                                <li><a href="#">Обед</a></li>
+                                <li><a href="#">Ужин</a></li>
+                                <li><a href="#">Я на диете</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="content">
+        <div class="container">
+            <div class="img_block col-md-3">
+                <img src="img/img-content.png" height="164" width="280" alt="">
+            </div>
+            <div class="description col-md-9">
+                <p>Предыдущая лента Мартина Скорсезе «Хранитель времени» (оригинальное название — «Hugo») оказалась для кинематографиста довольно нетипичной. Не то чтобы у него получилась совсем детская лента — но это кино о детях, открывающих мир и заражающих своей увлеченностью разочарованных в жизни взрослых; кино, способное заинтересовать и совсем юных зрителей (не в последнюю очередь благодаря 3D-спецэффектам).
+                </p>
+                <p>Новая работа Скорсезе «Волк с Уолл-стрит» — в каком-то смысле полная противоположность: ленту о выходках финансиста Джордана Белфорта точно не стоит показывать детям, да они, в общем-то, и сами вряд ли захотят ее смотреть.</p>
+                <p>Сам Белфорт существует в действительности, так что его история, какой бы дикой она ни казалась, более-менее близка к реальности. Сценаристы поменяли некоторые имена (например, жен финансиста звали Дениз и Надин, а не Тереза и Наоми). Общий же ход событий, по всей видимости, передан в картине достаточно точно. Белфорт с юных лет интересовался деньгами и их распределением, в двадцать с небольшим пошел на работу в финансовую фирму, а чуть позже создал собственную компанию.</p>
+            </div>
+            <div class="see_also">
+                <p>Смотрите также:</p>
+                <p class="calendar_p">
+                    <i class="calendar_i"></i>
+                    <a href="#">Наш календарь</a>
+                </p>
+                <p class="email_p">
+                    <i class="email_i"></i>
+                    <a href="#">Связаться с нами</a>
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container footer_box">
+            <div class="row">
+                <p>© 2014 Screen Interactive</p>
+            </div>
+        </div>
+    </footer>
+    <!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+    <script src="libs/jquery/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/common.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google Analytics counter -->
+    <!-- /Google Analytics counter -->
+</body>
+
+</html>
