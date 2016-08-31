@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>Калькулятор</title>
+    <meta name="description" content="calculator" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="libs/animate/animate.min.css">
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="media.css" />
+</head>
+
+<body>
+    <div class="container calc_wrap">
+        <div class="row">
+            <form onsubmit="return false" class="form_calc col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" name="calculator">
+                <h1>Калькулятор на <span>JS</span></h1>
+                <input type="text" name="answer" id="input" class="form-control" value="0">
+                <br>
+                <input id="num1" type="button" class="btn btn-default" value="1" />
+                <input id="num2" type="button" class="btn btn-default" value="2" />
+                <input id="num3" type="button" class="btn btn-default" value="3" />
+                <input id="num+" type="button" class="btn btn-default" value="+" />
+                <input id="numArr" type="button" class="btn btn-default" value="←" />
+                <br>
+                <input id="num4" type="button" class="btn btn-default" value="4" />
+                <input id="num5" type="button" class="btn btn-default" value="5" />
+                <input id="num6" type="button" class="btn btn-default" value="6" />
+                <input id="numMinus" type="button" class="btn btn-default" value="-" />
+                <input id="factorial" type="button" class="btn btn-default" value="!" />
+                <br>
+                <input id="num7" type="button" class="btn btn-default" value="7" />
+                <input id="num8" type="button" class="btn btn-default" value="8" />
+                <input id="num9" type="button" class="btn btn-default" value="9" />
+                <input id="num*" type="button" class="btn btn-default" value="*" />
+                <br>
+                <input id="numClear" type="button" class="btn btn-default" value="C" />
+                <input id="num0" type="button" class="btn btn-default" value="0" />
+                <input id="num." type="button" class="btn btn-default" value="." />
+                <input id="num/" type="button" class="btn btn-default" value="/" />
+                <br>
+                <input id="num_equally" type="button" class="btn btn-default equally" value="=" />
+                <input id="percent" type="button" class="btn btn-default" value="%" />
+                <input id="sqrt" type="button" class="btn btn-default" value="√" />
+                <br>
+                <input id="reset" type="button" class="btn btn-default" value="Сброс истории выражений" />
+            </form>
+        </div>
+    </div>
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
+    <script src="libs/jquery/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="libs/animate/animate-css.js"></script>
+    <script src="libs/waypoints/waypoints-1.6.2.min.js"></script>
+    <script src="js/mathparser.js"></script>
+    <script src="js/common.js"></script>
+    <!-- Yandex.Metrika counter -->
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google Analytics counter -->
+    <!-- /Google Analytics counter -->
+</body>
+
+</html>

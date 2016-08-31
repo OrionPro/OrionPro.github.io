@@ -1,0 +1,168 @@
+*::-webkit-input-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+*:-moz-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+*::-moz-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+*:-ms-input-placeholder {
+    color: #666;
+    opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {}
+
+body input:required:valid,
+body textarea:required:valid {}
+
+body {
+    font-family: "RobotoRegular", sans-serif;
+    font-size: 16px;
+}
+
+.calc_wrap h1 {
+    float: left;
+    margin-top: -27px;
+    margin-bottom: 6px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.calc_wrap span {
+    font-family: initial;
+    font-size: 20px;
+}
+
+.calc_wrap {
+    position: relative;
+    text-align: -moz-center;
+    text-align: center;
+    text-align: -webkit-center;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
+
+.form_calc {
+    padding: 30px;
+    height: 365px;
+    -moz-box-shadow: 6px -2px 13px rgb(17, 16, 16);
+    ;
+    /*FF 3.5+*/
+    -webkit-box-shadow: 6px -2px 13px rgb(17, 16, 16);
+    ;
+    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 6px -2px 13px rgb(17, 16, 16);
+    ;
+    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    background: -o-linear-gradient(69deg, #2C0909 2%, #B5B5B5 94%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(69deg, #2C0909 2%, #B5B5B5 94%);
+    /* IE10+ */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#2C0909', endColorstr='#B5B5B5', GradientType='1');
+    /* for IE */
+    background: linear-gradient(69deg, #2C0909 2%, #B5B5B5 94%);
+    /* W3C */
+}
+
+.form-control {
+    margin: auto;
+    height: 45px;
+    width: 80%;
+    text-align: right;
+    color: #010101;
+    background-color: #A6EA69;
+    font-size: 23px;
+}
+
+.equally {
+    margin-top: 4px;
+    width: 18%;
+}
+
+#numArr {
+    position: absolute;
+}
+
+#factorial {
+    position: absolute;
+}
+
+.btn-default {
+    color: #fff;
+    background: -webkit-linear-gradient(66deg, #303030 0, #6E6E6E 50%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(66deg, #303030 0, #6E6E6E 50%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(66deg, #303030 0, #6E6E6E 50%);
+    /* IE10+ */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1');
+    /* for IE */
+    background: linear-gradient(66deg, #303030 0, #6E6E6E 50%);
+    /* W3C */
+    border-color: #ccc;
+}
+
+.btn-default:hover,
+.btn-default:focus,
+.btn-default.focus,
+.btn-default:active,
+.btn-default.active,
+.open > .dropdown-toggle.btn-default {
+    color: #fff;
+    background: -webkit-linear-gradient(266deg, #303030 0, #6E6E6E 50%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(266deg, #303030 0, #6E6E6E 50%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(266deg, #303030 0, #6E6E6E 50%);
+    /* IE10+ */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#303030', endColorstr='#6E6E6E', GradientType='1');
+    /* for IE */
+    background: linear-gradient(266deg, #303030 0, #6E6E6E 50%);
+    border-color: #adadad;
+}
+
+.btn {
+    padding: 6px 12px;
+    font-size: 11px;
+}
+
+.historyList {
+    background: -o-linear-gradient(69deg, #857C7C 2%, #EFEFEF 94%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(69deg, #857C7C 2%, #EFEFEF 94%);
+    /* IE10+ */
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#857C7C', endColorstr='#EFEFEF', GradientType='1');
+    /* for IE */
+    background: linear-gradient(69deg, #857C7C 2%, #EFEFEF 94%);
+    /* W3C */
+    -moz-box-shadow: 6px -2px 13px rgb(17, 16, 16);
+    ;
+    /*FF 3.5+*/
+    -webkit-box-shadow: 6px -2px 13px rgb(17, 16, 16);
+    ;
+    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 6px -2px 13px rgb(17, 16, 16);
+    ;
+    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+}
+
+.historyList span {
+    font-size: 20px;
+    text-shadow: none;
+    color: #0063B7;
+}
+
+.historyList p {
+    font-size: 20px;
+}
