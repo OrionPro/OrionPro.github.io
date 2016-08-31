@@ -1,0 +1,458 @@
+/* Шапка сайта. Логотип и телефон. */
+
+header {
+    width: 980px;
+    height: 107px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    height: 34px;
+}
+
+.logo img {
+    margin-top: 36px;
+    margin-left: 1px;
+}
+
+.phone {
+    float: right;
+    margin-right: 1px;
+    margin-top: 10px;
+}
+
+.phone p {
+    color: #000;
+    font: 17px "Arial", sans-serif;
+}
+
+.phone:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 28px;
+    right: 129px;
+    top: 37px;
+    background: url(img/phone_img.png) no-repeat;
+}
+/* Верхнее меню */
+
+nav {
+    height: 40px;
+    width: 100%;
+    background-color: #eeeeee;
+}
+
+.menu {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.menu ul li {
+    float: left;
+    margin-right: 150px;
+}
+
+.menu ul li a {
+    color: #2b2b2b;
+    font: 15px/44px "Arial", sans-serif;
+    text-decoration: none;
+}
+
+.menu ul li:last-child {
+    float: right;
+    margin-right: 2px;
+}
+
+.menu ul li:nth-child(4n) {
+    margin-right: 0;
+}
+/* Основной контент */
+
+.main_content {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.content {
+    float: left;
+    margin-top: 9px;
+    width: 700px;
+}
+
+.left_nav {
+    background: url(img/arrow_.png) no-repeat 48px 7px;
+}
+
+.left_nav a {
+    margin-right: 24px;
+    color: #686868;
+    font: 11px "Tahoma", sans-serif;
+    text-decoration: none;
+}
+
+.left_nav .active {
+    text-decoration: underline;
+}
+
+.content h1 {
+    margin-top: 31px;
+    color: #181818;
+    font: 28px "Tahoma", sans-serif;
+    letter-spacing: -2px;
+}
+
+.content p {
+    margin-top: 25px;
+    color: #181818;
+    font: 12px/18px "Tahoma", sans-serif;
+    word-spacing: 1px;
+}
+
+.content p+img+p {
+    margin-top: 8px;
+}
+
+.content img {
+    margin-top: 16px;
+}
+
+.content h3 {
+    margin-top: 37px;
+    color: #181818;
+    font: 18px "Tahoma", sans-serif;
+    letter-spacing: -1px;
+}
+
+.content p+img+p+h3+p {
+    margin-top: 14px;
+}
+
+.content ul {
+    position: relative;
+    margin-left: 32px;
+    margin-top: 20px;
+}
+
+.content ul li {
+    margin-top: 13px;
+}
+
+.content ul li:before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    left: -32px;
+    background: url(img/divider.png) no-repeat 0 8px;
+}
+
+.content ul li a {
+    color: #2da7dc;
+    font: 12px "Tahoma", sans-serif;
+}
+
+.divider {
+    margin-top: 28px;
+    border: 1px dotted #bebebe;
+}
+
+.head_h4 h4 {
+    color: #434343;
+    font: 14px "Tahoma", sans-serif;
+    margin-top: 24px;
+}
+
+.img_block img {
+    display: inline-block;
+    margin-right: 21px;
+    margin-top: 13px;
+}
+
+.img_block img:last-child {
+    margin-right: 0;
+}
+
+.head_h4 p {
+    margin-top: 18px;
+}
+
+.head_h4 ul li:before {
+    content: "";
+    background: transparent;
+}
+
+.head_h4 ul {
+    margin-left: -1px;
+}
+
+.head_h4 ul li {
+    margin-top: 13px;
+}
+
+.table table {
+    margin-top: 23px;
+    width: 100%;
+}
+
+.table p {
+    color: #434343;
+    font: 12px "Tahoma", sans-serif;
+    text-transform: uppercase;
+}
+
+.table thead th {
+    text-align: left;
+    color: #696969;
+    font: 11px "Tahoma", sans-serif;
+}
+
+.table tbody {
+    color: #262626;
+    font: 11px "Tahoma", sans-serif;
+}
+
+.table span {
+    color: #2da7db;
+}
+
+.table thead th {
+    padding: 5px 5px 5px 0;
+}
+
+.table thead th:first-child {
+    width: 65px;
+    padding-left: 12px;
+    text-align: left;
+}
+
+.table thead th:nth-child(2n) {
+    width: 196px;
+}
+
+.table thead th:nth-child(3n) {
+    width: 153px;
+}
+
+.table thead th:nth-child(4n) {
+    width: 140px;
+}
+
+.table tbody th {
+    text-align: left;
+    padding: 12px 16px 12px 13px;
+}
+
+.table .table_w {
+    background: #f8f8f8;
+}
+
+.divider2 {
+    margin-top: 35px;
+    border: 1px dotted #bebebe;
+}
+
+.tabs p {
+    margin-top: 19px;
+    text-transform: uppercase;
+}
+
+.tabs ul {
+    margin: 25px 0 0 0px;
+}
+
+.content .tabs a {
+    outline: none;
+    color: #000;
+    font: 12px "Tahoma", sans-serif;
+    text-decoration: none;
+    padding: 9px 15px 9px 15px;
+    border-radius: 4px 4px 0 0;
+}
+
+.content .ui-state-default a {
+    color: #000;
+    background: #eee;
+    padding: 10px 17px 10px 17px;
+    border-radius: 4px 4px 0 0;
+}
+
+.content .tabs li {
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.content .ui-tabs-active a,
+.content .ui-state-active a {
+    color: #fff;
+    background: #2da8dc;
+    padding: 10px 15px 10px 15px;
+    border-radius: 4px 4px 0 0;
+}
+
+#tabs ul li:before {
+    content: "";
+    display: none;
+}
+
+.divider3 {
+    margin-top: 11px;
+    border: 1px solid #2da8dc;
+}
+
+.ui-tabs .ui-tabs-panel {
+    color: #262626;
+    font: 12px/17px "Tahoma", sans-serif;
+    word-spacing: 1px;
+    padding: 9px 0px;
+}
+/* Контент справа (Сайдбар) */
+
+sidebar {
+    width: 230px;
+    float: right;
+}
+
+.search-form-field {
+    margin-top: 63px;
+    margin-left: -4px;
+    height: 22px;
+    width: 100%;
+    background: url(img/lupa.png) no-repeat 210px;
+    border: 1px solid #bcbcbc;
+    border-radius: 2px;
+}
+
+sidebar h2 {
+    color: #181818;
+    font: 22px "Tahoma", sans-serif;
+    margin: 26px -3px 17px;
+    letter-spacing: -1px;
+    word-spacing: 6px;
+}
+
+sidebar a {
+    display: block;
+    margin-left: -4px;
+    color: #2da7dc;
+    font: 14px "Tahoma", sans-serif;
+}
+
+sidebar span {
+    margin-left: -3px;
+    color: #848484;
+    font: 11px/29px "Tahoma", sans-serif;
+}
+
+sidebar p {
+    margin-top: 1px;
+    margin-left: -3px;
+    color: #262626;
+    font: 12px/19px "Tahoma", sans-serif;
+    word-spacing: 1px;
+}
+
+.news {
+    padding-bottom: 17px;
+    border-bottom: 1px dotted #bfbfbf;
+}
+
+.news2 {
+    padding-top: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px dotted #bfbfbf;
+}
+
+.news3 {
+    padding-top: 19px;
+    padding-bottom: 17px;
+    border-bottom: 1px dotted #bfbfbf;
+}
+
+sidebar .all_news {
+    text-decoration: none;
+    color: #000;
+    font: 12px "Tahoma", sans-serif;
+    margin: 23px 0px 0 129px;
+    padding: 5px 14px 5px 14px;
+    background: #e4e4e4;
+    display: inline-block;
+    border-radius: 3px;
+}
+
+.subscription h3 {
+    margin: 39px 0 21px -4px;
+    color: #181818;
+    font: 24px "Tahoma", sans-serif;
+    letter-spacing: -1px;
+}
+
+.input_txt {
+    text-align: left;
+    padding-left: 9px;
+    height: 21px;
+    width: 95%;
+    border: 1px solid #bcbcbc;
+    border-radius: 2px;
+    color: #848484;
+    font: 11px/13px "Tahoma", sans-serif;
+    margin-bottom: 17px;
+    margin-left: -2px;
+}
+
+.button_enter_form {
+    margin: 11px 114px;
+    cursor: pointer;
+    background: #2da8dc;
+    color: #fff;
+    font: 14px "Tahoma", sans-serif;
+    padding: 4px 16px 4px 16px;
+    border-radius: 3px;
+    border: none;
+}
+/* Футер. Copyright и Социальные сети. */
+
+footer {
+    font: 11px "Tahoma", sans-serif;
+    width: 980px;
+    margin: 0 auto;
+    border-top: 1px dotted #bfbfbf;
+    margin-top: 72px;
+}
+
+footer a {
+    color: #2da8dc;
+}
+
+footer p {
+    margin-top: 30px;
+}
+
+.social {
+    margin: -21px 0px 0px 0px;
+    float: right;
+}
+
+.social li a {
+    display: block;
+    width: 31px;
+    height: 31px;
+}
+
+.social li {
+    padding-right: 2px;
+    display: inline-block;
+}
+
+.skype {
+    background: url(img/spite_social.png) no-repeat;
+}
+
+.facebook {
+    background: url(img/spite_social.png) no-repeat -31px;
+}
+
+.twitter {
+    background: url(img/spite_social.png) no-repeat -62px;
+}
