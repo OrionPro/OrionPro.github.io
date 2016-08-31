@@ -1,0 +1,434 @@
+@font-face {
+    font-family: 'daniel_blackregular';
+    src: url('fonts/danielbk-webfont.eot');
+    src: url('fonts/danielbk-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/danielbk-webfont.woff2') format('woff2'), url('fonts/danielbk-webfont.woff') format('woff'), url('fonts/danielbk-webfont.ttf') format('truetype'), url('fonts/danielbk-webfont.svg#daniel_blackregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'standard0765';
+    src: url('fonts/Standard0765.eot');
+    src: url('fonts/Standard0765.eot?#iefix') format('embedded-opentype'), url('fonts/standard0765.woff') format('woff'), url('fonts/Standard0765.ttf') format('truetype'), url('fonts/standard0765.svg#standard0765') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Standard0755';
+    src: url('fonts/Standard0755.eot');
+    src: url('fonts/Standard0755.eot?#iefix') format('embedded-opentype'), url('fonts/Standard0755.woff2') format('woff2'), url('fonts/Standard0755.woff') format('woff'), url('fonts/Standard0755.ttf') format('truetype'), url('fonts/Standard0755.svg#Standard0755') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.body {
+    background: #ffffff;
+    position: relative;
+}
+
+header .bg {
+    margin: 0 auto;
+    width: 1000px;
+    position: relative;
+}
+
+.wrap_logo_img {
+    width: 586px;
+    height: 449px;
+    background: url(i/circle_bg.png);
+    position: absolute;
+    left: 151px;
+    top: -13px;
+    z-index: 0;
+}
+
+.wrap_logo_img img {
+    position: absolute;
+    left: 267px;
+    top: 24px;
+    z-index: 1;
+}
+
+.top_line {
+    width: 100%;
+    height: 35px;
+    background: #f1f1f1;
+    z-index: -1;
+}
+
+.topmenu {
+    width: 100%;
+    min-height: 35px;
+    background: #F6F6F6;
+    border-bottom: 2px solid #fff;
+}
+
+.linkgroup {
+    width: 625px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.linkgroup a {
+    color: #000;
+    font: bold 10px/37px "Myriad Pro", sans-serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+#active {
+    color: #fccf73;
+}
+
+.linkgroup a:hover {
+    color: #fccf73;
+}
+
+.linkgroup li {
+    display: block;
+    margin-right: 10px;
+    min-width: 50px;
+    text-align: center;
+    float: left;
+}
+
+.all_content {
+    width: 625px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.topmenu_wrap {
+    height: 10px;
+    width: 100%;    
+    background: #f1f1f1;
+}
+
+.topmenu_decor {
+	width: 625px;
+    height: 10px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.topmenu_decor ul {
+    height: 10px;
+}
+
+.topmenu_decor li {
+    height: 10px;
+    width: 50px;
+    display: inline-block;
+    margin-right: 10px;
+    float: left;
+}
+
+#decor_blu {
+    background: #14aef4;
+}
+
+#decor_yellow {
+    background: #FEBF24;
+}
+
+#decor_green {
+    background: #89C734;
+}
+
+#decor_red {
+    background: #EF141C;
+}
+
+#decor_purple {
+    background: #832878;
+}
+
+.logo_wrap {
+    margin: 72px auto;
+    position: relative;
+}
+
+.logo_wrap a {
+    text-decoration: none;
+}
+
+.logo_wrap h1 {
+    color: #53b1d1;
+    font: 50px 'daniel_blackregular', sans-serif;
+    padding-left: 35px;
+}
+
+.logo_wrap span {
+    color: #B1DE37;
+    margin-left: -36px;
+}
+
+.logo_wrap .logo_p {
+    margin-left: 181px;
+    margin-top: -7px;
+    color: #949494;
+    font: bold 10px "Myriad Pro", sans-serif;
+}
+
+.content {
+    position: relative;
+    z-index: 100;
+    width: 625px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50px;
+    background-color: rgba(176, 221, 54, .9);
+    margin-top: 20px;
+    overflow: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=0, Direction=0, Color=#FFFFFF)";
+    /*IE 8*/
+    -moz-box-shadow: 0 11px 0 rgba(255, 255, 255, 0.6);
+    /*FF 3.5+*/
+    -webkit-box-shadow: 0 11px 0 rgba(255, 255, 255, 0.6);
+    /*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+    box-shadow: 0 11px 0 rgba(255, 255, 255, 0.6);
+    /* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+    filter: progid: DXImageTransform.Microsoft.Shadow(Strength=0, Direction=135, Color=#FFFFFF);
+    /*IE 5.5-7*/
+}
+
+.content2 {
+    position: relative;
+    z-index: 99;
+    height: 370px;
+    margin: -30px auto;
+    border-radius: 50px;
+    background-color: rgba(84, 177, 210, .9);
+}
+
+.dog_news_img {
+    float: left;
+    margin-top: 20px;
+    margin-left: -10px;
+}
+
+.dog_news_text {
+    float: left;
+    width: 150px;
+}
+
+.dog_news_text h2 {
+    color: #fff;
+    font: 23px 'daniel_blackregular', sans-serif;
+    margin-left: -15px;
+    margin-top: 17px;
+}
+
+.text-about {
+    width: 150px;
+}
+
+.text-about span {
+    font: 8px 'Standard0765', sans-serif;
+}
+
+.dog_news_text p {
+    color: #000;
+    font: 400 8px/15px 'Standard0755', sans-serif;
+    margin-left: -15px;
+    padding-top: 7px;
+    padding-bottom: 18px;
+}
+
+.dog_about_us {
+    float: right;
+    width: 320px;
+}
+
+.dog_about_us_text {
+    float: left;
+    width: 150px;
+}
+
+.dog_about_us_img {
+    float: left;
+    width: 165px;
+    height: 120px;
+    margin-left: -27px;
+    margin-top: 23px;
+}
+
+.dog_about_us_text h2 {
+    color: #fff;
+    font: 23px 'daniel_blackregular', sans-serif;
+    margin: 18px 0 0 -35px;
+}
+
+.dog_about_us_text p {
+    color: #000;
+    font: 500 8px/15px 'Standard0755', sans-serif;
+    margin-left: -33px;
+    padding-top: 7px;
+    padding-bottom: 18px;
+}
+
+.dog_about_us-text-about {
+    width: 130px;
+}
+
+.dog_about_us span {
+    font: 8px 'Standard0765', sans-serif;
+}
+
+.content a {
+    text-decoration: none;
+    color: #fff;
+    font: 600 11px "Myriad Pro", sans-serif;
+    margin-left: 3px;
+}
+
+.dog_news_text a:before {
+    content: url(i/Lapa.png);
+    position: absolute;
+    left: 136px;
+}
+
+.dog_about_us_text a:before {
+    content: url(i/Lapa.png);
+    position: absolute;
+    left: 409px;
+}
+
+.dog_about_us_text a {
+    margin-left: -10px;
+}
+
+.content2 h3 {
+    color: #fff;
+    font: 600 24px "Myriad Pro", sans-serif;
+}
+
+.left_content {
+    float: left;
+    margin-top: 60px;
+    width: 265px;
+    margin-left: 40px;
+}
+
+.right_content {
+    float: right;
+    margin-top: 60px;
+    width: 265px;
+    margin-right: 25px;
+}
+
+.left_content p {
+    color: #000;
+    font: 600 10px "Myriad Pro", sans-serif;
+    margin-top: -5px;
+}
+
+.right_content p {
+    color: #000;
+    font: 600 10px "Myriad Pro", sans-serif;
+    margin-top: -5px;
+}
+
+.puppies_for_sale {
+    height: 80px;
+    width: 251px;
+}
+
+.puppies_for_sale img {
+    float: left;
+    margin-top: -6px;
+}
+
+.puppies_for_sale2 {
+    height: 80px;
+    width: 251px;
+}
+
+.puppies_for_sale2 img {
+    float: left;
+    margin-top: -4px;
+}
+
+.left_content .puppies_for_sale p {
+    color: #fff;
+    font: 500 8px/15px 'Standard0755', sans-serif;
+    margin-left: 90px;
+    margin-top: 23px;
+}
+
+.puppies_for_sale span {
+    color: #000;
+    font: 8px 'Standard0765', sans-serif;
+}
+
+.puppies_for_sale2 p {
+    color: #fff;
+    font: 500 8px/15px 'Standard0755', sans-serif;
+    margin-left: 90px;
+    margin-top: 8px;
+}
+
+.puppies_for_sale2 span {
+    color: #000;
+    font: 8px 'Standard0765', sans-serif;
+}
+
+.left_content a {
+    margin-left: 25px;
+    display: block;
+    color: #fff;
+    font: 500 8px/17px 'Standard0755', sans-serif;
+    text-decoration: none;
+}
+
+.left_content a:before {
+    content: url(i/strelki_sale.png);
+    position: absolute;
+    left: 44px;
+    top: 290px;
+}
+
+.right_content img {
+    margin-top: 16px;
+    padding-bottom: 5px;
+}
+
+.right_content span {
+    color: #000;
+    font: 8px/15px 'Standard0765', sans-serif;
+    display: block;
+    width: 225px;
+    margin-left: 10px;
+}
+
+.right_content p + img + span + p {
+    color: #fff;
+    font: 500 8px/17px 'Standard0755', sans-serif;
+    display: block;
+    width: 230px;
+    margin-left: 10px;
+    margin-top: 13px;
+    padding-bottom: 8px;
+}
+
+.right_content a {
+    text-decoration: none;
+    color: #fff;
+    font: 600 11px "Myriad Pro", sans-serif;
+    margin-left: 177px;
+}
+
+.right_content a:before {
+    content: url(i/Lapa.png);
+    position: absolute;
+    left: 490px;
+}
+
+.footer {
+	width: 625px;
+    margin: 50px auto;
+    color: #8f938d;
+    font: 500 8px/17px 'Standard0755', sans-serif;
+    text-align: center;
+}
