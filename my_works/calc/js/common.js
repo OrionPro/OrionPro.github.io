@@ -447,7 +447,9 @@
 
         var introducedExpression = calculator.answer.value;
         var expression = {};
-        var form = document.querySelector('.calc_wrap .row');
+        var form = document.querySelector('.historyListWrap');
+        var first= form.firstChild;
+
 
         // используем парсер а не eval
 
@@ -477,7 +479,7 @@
 
         allHistoryExpression.innerHTML = '<p>' + 'Выражение : ' + '<span>' + expression.introducedExpression + '</span>' + '</p>' + '<p>' + ' Ответ : ' + '<span>' + calculator.answer.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + '</span>' + '</p>';
 
-        form.appendChild(allHistoryExpression);
+        form.insertBefore(allHistoryExpression, first);
 
     }
 
