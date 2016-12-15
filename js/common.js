@@ -1,487 +1,171 @@
-﻿$(window).ready(function() {
-    var num0 = document.getElementById('num0');
-    var num1 = document.getElementById('num1');
-    var num2 = document.getElementById('num2');
-    var num3 = document.getElementById('num3');
-    var num4 = document.getElementById('num4');
-    var num5 = document.getElementById('num5');
-    var num6 = document.getElementById('num6');
-    var num7 = document.getElementById('num7');
-    var num8 = document.getElementById('num8');
-    var num9 = document.getElementById('num9');
-    var numPlus = document.getElementById('num+');
-    var numMinus = document.getElementById('numMinus');
-    var numMultiply = document.getElementById('num*');
-    var numDivide = document.getElementById('num/');
-    var numEqually = document.getElementById('num_equally');
-    var numClear = document.getElementById('numClear');
-    var answer = document.getElementById('input');
-    var numDot = document.getElementById('num.');
-    var reset = document.getElementById('reset');
-    var percent = document.getElementById('percent');
-    var sqrt = document.getElementById('sqrt');
-    var numArr = document.getElementById('numArr');
-    var factorial = document.getElementById('factorial');
-    var allHistoryExpression = document.createElement('div');
-    var form = document.querySelector('.calc_wrap .row');
-
-    // Функция нажатия на кнопки 0-9
-
-    num0.addEventListener('click', function() {
-        if (calculator.answer.value == '0')
-            calculator.answer.value = '0';
-        else {
-            calculator.answer.value += '0';
-        }
-
-    });
-    num1.addEventListener('click', function() {
-        if (calculator.answer.value == '0')
-            calculator.answer.value = '1';
-        else {
-            calculator.answer.value += '1';
-        }
-
-    });
-    num2.addEventListener('click', function() {
-        if (calculator.answer.value == '0')
-            calculator.answer.value = '2';
-        else {
-            calculator.answer.value += '2';
-        }
-
-    });
-    num3.addEventListener('click', function() {
-        if (calculator.answer.value == '0')
-            calculator.answer.value = '3';
-        else {
-            calculator.answer.value += '3';
-        }
-
-    });
-    num4.addEventListener('click', function() {
-        if (calculator.answer.value == '0')
-            calculator.answer.value = '4';
-        else {
-            calculator.answer.value += '4';
-        }
-
-    });
-    num5.addEventListener('click', function() {
-        if (calculator.answer.value == '0')
-            calculator.answer.value = '5';
-        else {
-            calculator.answer.value += '5';
-        }
-
-    });
-    num6.addEventListener('click', function() {
-        if (calculator.answer.value == '0')
-            calculator.answer.value = '6';
-        else {
-            calculator.answer.value += '6';
-        }
-
-    });
-    num7.addEventListener('click', function() {
-        if (calculator.answer.value == '0')
-            calculator.answer.value = '7';
-        else {
-            calculator.answer.value += '7';
-        }
-
-    });
-    num8.addEventListener('click', function() {
-        if (calculator.answer.value == '0')
-            calculator.answer.value = '8';
-        else {
-            calculator.answer.value += '8';
-        }
-
-    });
-    num9.addEventListener('click', function() {
-        if (calculator.answer.value == '0')
-            calculator.answer.value = '9';
-        else {
-            calculator.answer.value += ('9');
-        }
-
-    });
-
-    // обработчик кнопки точка 
-
-    numDot.addEventListener('click', function() {
-
-        calculator.answer.value += '.';
-
-    });
-
-    // обработчик кнопки +
-
-    numPlus.addEventListener('click', function() {
-
-
-        calculator.answer.value += ' + ';
-
-
-    });
-
-    // // обработчик кнопки квадратный кроень
-
-    sqrt.addEventListener('click', function() {
-
-        answer.value = 'sqrt' + '(' + calculator.answer.value.match(/\d+/g) + ')';
-
-
-
-    });
-
-    //  в этом событии, при клике, мы с помощью регулярных выражений подставляем минус (-) ,
-    // т.е. если regexp видит, что введено задуманное выражение он ставит с пробелами минус, 
-    // если нет подходящего выражения, он ставит else ( ' -'). 
-    // В частности в данном случае это важно для пересчёта процента, чтобы если число со знаком минус, чтобы он был возле числа без пробела
-
-    numMinus.addEventListener('click', function() {
-        if (calculator.answer.value == '0')
-            calculator.answer.value = '-';
-        else if (calculator.answer.value == calculator.answer.value.match(/\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\s[^\s]\s\s\-\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\.\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\.\d+\s[^\s]\s\d+\.\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\.\d+\s[^\s]\s\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\.\d+\s[^\s]\s\s\-\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\.\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\.\d+\s[^\s]\s\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\.\d+\s[^\s]\s\d+\.\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\.\d+\s[^\s]\s\s\-\d+\.\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\.\d+\s[^\s]\s\s\-\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\.\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\s[^\s]\s\s\-\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\s[^\s]\s\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\s[^\s]\s\d+\s[^\s]\s\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\s[^\s]\s\d+\s[^\s]\s\s\-\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\s[^\s]\s\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\s[^\s]\s\d+\s[^\s]\s\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else {
-            calculator.answer.value += (' -');
-        }
-
-
-    });
-
-    // обработчик кнопки умножение
-
-    numMultiply.addEventListener('click', function() {
-
-        calculator.answer.value += ' * ';
-
-    });
-
-    // обработчик кнопки деление
-
-    numDivide.addEventListener('click', function() {
-
-        calculator.answer.value += ' / ';
-
-    });
-
-    //  Сброс результатов
-
-    numClear.addEventListener('click', function() {
-
-        calculator.answer.value = '0';
-
-    });
-
-    // Удаляет последнюю введённую цифру
-
-    numArr.addEventListener('click', function() {
-
-        if (calculator.answer.value == calculator.answer.value.match(/\d/g))
-            calculator.answer.value = '0';
-        else if (calculator.answer.value == calculator.answer.value.match(/\-/g)) {
-            calculator.answer.value = '0';
-        } else {
-            calculator.answer.value = calculator.answer.value.slice(0, -1);
-        }
-
-
-
-    });
-
-    //  Клик по кнопке = выдаёт результат
-
-    numEqually.addEventListener('click', function() {
-
-        showHistoryExpression();
-
-        $(".anim").animated("fadeIn"); // анимация истории результата
-        var fun = mathparser.parse(calculator.answer.value);
-        var result = fun({
-            sin: Math.sin,
-            cos: Math.cos,
-            sqrt: Math.sqrt
-        }, {});
-		
-		//функция определения целое число или дробное (если целое то выводим его, если дробное, то применяем метод toFixed)
-			function isInteger(num){
-				if(num/Math.floor(num)==1) return num;				
-				else {
-					return num.toFixed(3);
-				}
-			}
-        calculator.answer.value = isInteger(result);
-
-		
-
-    });
-
-    // вычисляем факториал
-
-    factorial.addEventListener('click', function() {
-
-        //  создаём пустой массив 
-
-        var injectedarray = [];
-
-        // куда положем введённое выражение
-
-        injectedarray = calculator.answer.value;
-
-        // функция reg exp, которая выбирает числа и операторы -+*/ в массив 
-
-        function parse(expr) {
-            var re = /(-?\d+(?:\.\d+)?)/;
-
-            var result = expr.match(re);
-
-            if (!result) return;
-            result.shift();
-
-            return result;
-        }
-
-        function factorial(n) {
-            return n ? n * factorial(n - 1) : 1;
-        }
-
-        factorialEq = calculator.answer.value = factorial(calculator.answer.value);
-
-        function showHistoryExpressionFactorial() {
-            var allHistoryExpression = document.createElement('div');
-
-            var introducedExpression = calculator.answer.value;
-            var expression = {};
-            var form = document.querySelector('.calc_wrap .row');
-
-
-
-            allHistoryExpression.setAttribute('class', 'historyList anim col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3');
-
-            // Вставляем div с добавленными классами в html, и добавляем в него нужную разметку в которую выводим результаты  
-            allHistoryExpression.innerHTML = '<p>' + 'Выражение : ' + '<span>' + parse(injectedarray) + '!' + '</span>' +
-                '</p>' + '<p>' + ' Факториал ' + parse(injectedarray) + ' = ' + '<span>' + factorialEq + '</span>' + '</p>';
-
-            form.appendChild(allHistoryExpression);
-
-        }
-        // вызываем функцию отображения истории
-
-        showHistoryExpressionFactorial();
-    });
-    //  высчитывает процент с помощью регулярного выражения
-
-    percent.addEventListener('click', function() {
-
-        //  создаём пустой массив 
-
-        var injectedarray = [];
-
-        // куда положем введённое выражение
-
-        injectedarray = calculator.answer.value;
-
-        // функция reg exp, которая выбирает числа и операторы -+*/ в массив 
-
-        function parse(expr) {
-            var re = /(-?\d+(?:\.\d+)?)\s*([-+*\/])\s*(-?\d+(?:\.\d+)?)/;
-
-            var result = expr.match(re);
-
-            if (!result) return;
-            result.shift();
-
-            return result;
-        }
-
-        // вычисляем процент введённого выражения
-
-        calculator.answer.value = parse(calculator.answer.value)[0] / 100 *
-            parse(calculator.answer.value)[2];
-
-        //  в переменную кладём полученный процент от введённого числа
-        var fun = mathparser.parse(calculator.answer.value);
-        var result = fun({
-            sin: Math.sin,
-            cos: Math.cos,
-            sqrt: Math.sqrt
-        }, {});
-		
-		//функция определения целое число или дробное (если целое то выводим его, если дробное, то применяем метод toFixed)
-		function isInteger(num){
-				if(num/Math.floor(num)==1) return num;				
-				else {
-					return num.toFixed(3);
-				}
-			}
-        var percentEq = calculator.answer.value = isInteger(result);
-
-        // функция отображения истории выражений при вычислении процентов
-
-        function showHistoryExpressionPercent() {
-
-            var allHistoryExpression = document.createElement('div');
-
-            var introducedExpression = calculator.answer.value;
-            var expression = {};
-            var form = document.querySelector('.calc_wrap .row');
-
-            expression.introducedExpression = injectedarray;
-
-            allHistoryExpression.setAttribute('class', 'historyList anim col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3');
-
-            // Вставляем div с добавленными классами в html, и добавляем в него нужную разметку в которую выводим результаты  
-            allHistoryExpression.innerHTML = '<p>' + 'Выражение : ' + '<span>' + expression.introducedExpression + '%' + '</span>' +
-                '</p>' + '<p>' + parse(injectedarray)[2] + ' % от ' + parse(injectedarray)[0].replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + ' = ' + '<span>' + percentEq.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + '</span>' + '</p>';
-
-            form.appendChild(allHistoryExpression);
-
-        }
-        // вызов функции пересчёта процентов
-
-        showHistoryExpressionPercent();
-
-        // подставляем изначально введённые значения, но убираем последнее значение (к примеру a+b% вот мы оставляем первое число+оператор арифметический ), вместо b  подставляем высчитанный процент от числа (calculator.answer.value, уже подсчитанный процент)
-
-        calculator.answer.value = parse(injectedarray)[0] + ' ' + parse(injectedarray)[1] + ' ' + calculator.answer.value;
-
-
-
-    });
-
-    // удаляет историю результатов
-
-    reset.addEventListener('click', function() {
-
-        var elem = document.querySelectorAll(".historyList");
-        // цикл проверяет все элементы с классом historyList 
-        for (var i = 0; i < elem.length; i++) {
-
-            elem[i].remove(); // и потом удаляет их
-
-        }
-
-    });
-
-
-    // на нажатие в форме кнопки ввод, выводим результат выражения
-
-    answer.onkeypress = function(e) {
-        e = e || event;
-
-        if (e.keyCode == 13) {
-            showHistoryExpression();
-
-            $(".anim").animated("fadeIn"); // анимация истории результата
-			
-            // используем парсер а не eval
-
-            var fun = mathparser.parse(calculator.answer.value);
-            var result = fun({
-                sin: Math.sin,
-                cos: Math.cos,
-                sqrt: Math.sqrt
-            }, {});
-			
-			//функция определения целое число или дробное (если целое то выводим его, если дробное, то применяем метод toFixed)
-			
-			function isInteger(num){
-				if(num/Math.floor(num)==1) return num;
-				else {
-					return num.toFixed(3);
-				}
-			}
-            calculator.answer.value = isInteger(result);
-
-
-        }
-
-    };
-
-    // показывает результат выражений с суммой (история выражений)
-
-    function showHistoryExpression() {
-        var allHistoryExpression = document.createElement('div');
-
-        // var historyEqually = eval(calculator.answer.value);
-
-        var introducedExpression = calculator.answer.value;
-        var expression = {};
-        var form = document.querySelector('.historyListWrap');
-        var first= form.firstChild;
-
-
-        // используем парсер а не eval
-
-        var fun = mathparser.parse(calculator.answer.value);
-        var result = fun({
-            sin: Math.sin,
-            cos: Math.cos,
-            sqrt: Math.sqrt
-        }, {});
-		
-		//функция определения целое число или дробное (если целое то выводим его, если дробное, то применяем метод toFixed)
-		function isInteger(num){
-				if(num/Math.floor(num)==1) return num;
-				else {
-					return num.toFixed(3);
-				}
-			}
-		
-		
-        expression.introducedExpression = calculator.answer.value;
-		 
-		calculator.answer.value = isInteger(result);	
-		
-		
-        allHistoryExpression.setAttribute('class', 'historyList anim col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3');
-
-
-        allHistoryExpression.innerHTML = '<p>' + 'Выражение : ' + '<span>' + expression.introducedExpression + '</span>' + '</p>' + '<p>' + ' Ответ : ' + '<span>' + calculator.answer.value.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + '</span>' + '</p>';
-
-        form.insertBefore(allHistoryExpression, first);
-
+$(document).ready(function() {
+	
+	//При нажатии на кнопку с классом .button, добавляет класс active
+
+	$('.button').click(function(e){
+	e.preventDefault();	$(this).toggleClass('active');
+	$(this).next().slideToggle();
+	//в появишемся меню, при нажатии на ссылку, убирает меню 
+ 	$(".menu_navbar ul li a").click(function() {
+		$(".menu_navbar").fadeOut(600);
+		$(".button").toggleClass("active");
+	});		
+});
+
+	$(window).load(function() {
+	//загрузчик  
+	$(".loader_inner").fadeOut();
+	$(".loader").delay(600).fadeOut("slow");
+		// код загрузчика 
+    function getRandom(size) {
+        return Math.floor(Math.random() * size);
     }
 
+    //Creating the layers for the stars
+    for (i = 2; i < 12; i++) {
+        $("#stars").append('<div class="star_layer" style="transform: translateZ(' + i + 'px) scale(' + (15 - i) / (15) + ');"></div>')
+    }
+
+    //Creating the stars
+    for (i = 0; i < 70; i++) {
+        $(".star_layer").eq(getRandom(10)).append('<div class="star"></div>');
+    }
+
+    updateStars();
+
+    //Change stars every cycle
+    setInterval(updateStars, 4000);
+
+    //Randomising stars. Position and opacity is changed every cycle.
+    function updateStars() {
+        $(".star").each(function() {
+            $(this).css({ "top": getRandom(200) + "px", "left": getRandom(200) + "px", "opacity": (20 + getRandom(50)) / 100 });
+        });
+    }
+    // Конец кода загрузчика
+	//анимации
+	$(".anim_left").animated("slideInLeft");
+	$(".main_head h1").animated("fadeInDown", "fadeOutUp");
+	$(".my_photo img").animated("zoomIn");
+	$(".anim").animated("slideInRight");
+	$(".an").animated("slideInRight");
+		
+});	
+
+	//Таймер обратного отсчета
+	//Документация: http://keith-wood.name/countdown.html
+	//<div class="countdown" date-time="2015-01-07"></div>
+	var austDay = new Date($(".countdown").attr("date-time"));
+	$(".countdown").countdown({until: austDay, format: 'yowdHMS'});
+
+	//Попап менеджер FancyBox
+	//Документация: http://fancybox.net/howto
+	//<a class="fancybox"><img src="image.jpg" /></a>
+	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
+	$(".fancybox").fancybox();
+
+	//Навигация по Landing Page
+	//$(".top_mnu") - это верхняя панель со ссылками.
+	//Ссылки вида <a href="#contacts">Контакты</a>
+	$(".top_mnu").navigation();
+
+	//Добавляет классы дочерним блокам .block для анимации
+	//Документация: http://imakewebthings.com/jquery-waypoints/
+	$(".block").waypoint(function(direction) {
+		if (direction === "down") {
+			$(".class").addClass("active");
+		} else if (direction === "up") {
+			$(".class").removeClass("deactive");
+		}
+	}, {offset: 100});
+
+	//Плавный скролл до блока .div по клику на .scroll
+	//Документация: https://github.com/flesler/jquery.scrollTo
+	$("a.scroll").click(function() {
+		$.scrollTo($(".top_carousel"), 1500, {
+			offset: -0
+		});
+	});
+	$("a.scroll1").click(function() {
+		$.scrollTo($(".my_work"), 1500, {
+			offset: -0
+		});
+	});
+	$("a.scroll2").click(function() {
+		$.scrollTo($(".main_head"), 1500, {
+			offset: -0
+		});
+	});
+	$("a.scroll4").click(function() {
+		$.scrollTo($(".middle_section"), 1500, {
+			offset: -0
+		});
+	});
+	$("a.scroll3").click(function() {
+		$.scrollTo($(".top_carousel"), 1500, {
+			offset: -0
+		});
+
+		$.scrollTo($(".bottom_section"), 20000, {
+			offset: -0
+		});
+	});
+
+	//Каруселька
+	//Документация: http://owlgraphic.com/owlcarousel/
+	var owl = $(".carousel");
+	owl.owlCarousel({
+		navigation : false, // Show next and prev buttons
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		singleItem:true,
+		itemsDesktop : false,
+     	itemsDesktopSmall : false,
+		itemsTablet: false,
+		itemsMobile : false,
+		autoPlay : true,
+    	stopOnHover : true
+	});
+	owl.on(".owl-wrapper", function (e) {
+		if (e.deltaY > 0) {
+			owl.trigger("owl.prev");
+		} else {
+			owl.trigger("owl.next");
+		}
+		e.preventDefault();
+	});
+	$(".next_button").click(function(){
+		owl.trigger("owl.next");
+	});
+	$(".prev_button").click(function(){
+		owl.trigger("owl.prev");
+	});
+
+	//Кнопка "Наверх"
+	//Документация:
+	//http://api.jquery.com/scrolltop/
+	//http://api.jquery.com/animate/
+	$("#top").click(function () {
+		$("body, html").animate({
+			scrollTop: 0
+		}, 800);
+		return false;
+	});
+	
+	//Аякс отправка форм
+	//Документация: http://api.jquery.com/jquery.ajax/
+	$("form").submit(function() {
+		$.ajax({
+			type: "GET",
+			url: "mail.php",
+			data: $("form").serialize()
+		}).done(function() {
+			alert("Спасибо за заявку!");
+			setTimeout(function() {
+				$.fancybox.close();
+			}, 1000);
+		});
+		return false;
+	});
 
 });
