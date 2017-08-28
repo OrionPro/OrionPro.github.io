@@ -13,7 +13,7 @@
     opacity: 1;
 }
 
-*:-ms-input-placeholder {
+*:-ms-input-placeholder 
     color: #666;
     opacity: 1;
 }
@@ -208,6 +208,7 @@ body {
 
 .top_carousel {    
     position: relative;
+    margin-bottom: -1px;
 }
 
 .prev_button,
