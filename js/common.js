@@ -78,37 +78,35 @@ $(document).ready(function() {
 			$(".class").removeClass("deactive");
 		}
 	}, {offset: 100});
-
-	//Плавный скролл до блока .div по клику на .scroll
-	//Документация: https://github.com/flesler/jquery.scrollTo
-	$("a.scroll").click(function() {
-		$.scrollTo($(".top_carousel"), 1500, {
-			offset: -0
-		});
+	// скролл по ссылке с атрибутом href
+	$(".menu_navbar a[href*='#']").on("click", function(e) {
+	    e.preventDefault();
+	    var anchor = $(this);
+	    $('html, body').stop().animate({
+	        scrollTop: $(anchor.attr('href')).offset().top
+	    }, 500);
+	    return false;
 	});
-	$("a.scroll1").click(function() {
-		$.scrollTo($(".my_work"), 1500, {
-			offset: -0
-		});
+	$(".up a[href*='#']").on("click", function(e) {
+	    e.preventDefault();
+	    var anchor = $(this);
+	    $('html, body').stop().animate({
+	        scrollTop: $(anchor.attr('href')).offset().top
+	    }, 500);
+	    return false;
 	});
-	$("a.scroll2").click(function() {
-		$.scrollTo($(".main_head"), 1500, {
-			offset: -0
-		});
-	});
-	$("a.scroll4").click(function() {
-		$.scrollTo($(".middle_section"), 1500, {
-			offset: -0
-		});
-	});
-	$("a.scroll3").click(function() {
-		$.scrollTo($(".top_carousel"), 1500, {
-			offset: -0
-		});
-
-		$.scrollTo($(".bottom_section"), 20000, {
-			offset: -0
-		});
+	$(".main_head a[href*='#']").on("click", function(e) {
+	    e.preventDefault();
+	    var anchor = $(this);
+	    $('html, body').stop().animate({
+	        scrollTop: $(anchor.attr('href')).offset().top
+	    }, 1500);
+	    setTimeout(function () {
+			$('html, body').stop().animate({
+				scrollTop: $('.bottom_section').offset().top
+			}, 15000);
+			return false;
+		}, 1500)
 	});
 
 	//Каруселька
