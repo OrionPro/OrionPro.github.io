@@ -25,12 +25,19 @@
 	.container {
         padding: 70px;
     }
+	.form_calc {
+		padding: 25px;
+	}
+
 	.form-control {
 		width: 100%;
 		font-size: 17px;
 	}
 	.btn-wrap {
 		width: 90%;
+	}
+	.btn {
+		font-size: 13px;
 	}
 }
 
@@ -51,7 +58,7 @@
 		font-size: 13px;
 	}
 	.btn-wrap {
-		width: 90%;
+		width: 100%;
 	}
 }
 
