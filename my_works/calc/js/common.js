@@ -3,7 +3,14 @@ function numberWithCommas(n) {
     var parts=n.toString().split(".");
     return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ") + (parts[1] ? "." + parts[1] : "");
 }
-
+// Create Element.remove() function if not exist
+if (!('remove' in Element.prototype)) {
+    Element.prototype.remove = function() {
+        if (this.parentNode) {
+            this.parentNode.removeChild(this);
+        }
+    };
+}
 $(window).ready(function() {
     var num0 = document.getElementById('num0');
     var num1 = document.getElementById('num1');
@@ -17,6 +24,7 @@ $(window).ready(function() {
     var num9 = document.getElementById('num9');
     var numPlus = document.getElementById('num+');
     var numMinus = document.getElementById('numMinus');
+    var numNegate = document.getElementById('negate');
     var numMultiply = document.getElementById('num*');
     var numDivide = document.getElementById('num/');
     var numEqually = document.getElementById('num_equally');
@@ -148,50 +156,8 @@ $(window).ready(function() {
     // В частности в данном случае это важно для пересчёта процента, чтобы если число со знаком минус, чтобы он был возле числа без пробела
 
     numMinus.addEventListener('click', function() {
-        if (calculator.answer.value == '0')
-            calculator.answer.value = '-';
-        else if (calculator.answer.value == calculator.answer.value.match(/\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\s[^\s]\s\s\-\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\.\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\.\d+\s[^\s]\s\d+\.\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\.\d+\s[^\s]\s\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\.\d+\s[^\s]\s\s\-\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\.\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\.\d+\s[^\s]\s\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\.\d+\s[^\s]\s\d+\.\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\.\d+\s[^\s]\s\s\-\d+\.\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\.\d+\s[^\s]\s\s\-\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\.\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\s[^\s]\s\s\-\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\s[^\s]\s\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\s[^\s]\s\d+\s[^\s]\s\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\d+\s[^\s]\s\d+\s[^\s]\s\s\-\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\s[^\s]\s\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else if (calculator.answer.value == calculator.answer.value.match(/\-\d+\s[^\s]\s\d+\s[^\s]\s\d+/g)) {
-            calculator.answer.value += ' - ';
-        } else {
-            calculator.answer.value += (' -');
-        }
 
+       calculator.answer.value += ' - ';
 
     });
 
@@ -200,6 +166,25 @@ $(window).ready(function() {
     numMultiply.addEventListener('click', function() {
 
         calculator.answer.value += ' * ';
+
+    });
+
+    // обработчик кнопки негативное число
+	numNegate.addEventListener('click', function() {
+		var currentValSplit,
+			currentVal = calculator.answer.value;
+
+		currentValSplit = currentVal.split(/[\s]+/);
+		var lastNumDel = currentValSplit.pop();
+		if (lastNumDel > 0) {
+			var ArrSplit = currentVal.split(/[\s]+/);
+			ArrSplit.splice(-1, 1, '-' + lastNumDel);
+			calculator.answer.value = ArrSplit.join(' ');
+		} else {
+			var ArrSplit = currentVal.split(/[\s]+/);
+			ArrSplit.splice(-1, 1, Math.abs(lastNumDel));
+			calculator.answer.value = ArrSplit.join(' ');
+		}
 
     });
 
@@ -248,20 +233,8 @@ $(window).ready(function() {
             cos: Math.cos,
             sqrt: Math.sqrt
         }, {});
-
-        //функция определения целое число или дробное (если целое то выводим его, если дробное, то применяем метод toFixed)
-        function isInteger(num) {
-            if (num / Math.floor(num) == 1) {            	
-                return num;
-            } else if (num == 0.30000000000000004) {            	
-                return num.toFixed(1);
-            } else {
-            	
-                return num;
-            }
-        }
-
-        calculator.answer.value = isInteger(result);
+        // Math.round(result*10000000)/10000000 это мы округляем всё лишнее, как в 0.1+0.2 = 0.30000000000000004 или 0.9/100*0.9 = 0.008100000000000001 (0.9-0.9%)
+        calculator.answer.value = Math.round(result*10000000)/10000000;
 
 
     });
@@ -348,67 +321,72 @@ $(window).ready(function() {
             return result;
         }
 
-        // вычисляем процент введённого выражения
+		// вычисляем процент введённого выражения
+		if (calculator.answer.value == calculator.answer.value.match(/(-?\d+(?:\.\d+)?(\s[-+*\/]\s)?)|(-\d?(?:\.\d+)?)/g)){ // здесь мы проверяем если введены уже какие то цифры с минусом или без, после цифры какой то арифметический знак то мы обнуляем calculator
+			calculator.answer.value = '0';
+		} else {
+			calculator.answer.value = parse(calculator.answer.value)[0] / 100 *
+				parse(calculator.answer.value)[2];
 
-        calculator.answer.value = parse(calculator.answer.value)[0] / 100 *
-            parse(calculator.answer.value)[2];
 
-        //  в переменную кладём полученный процент от введённого числа
-        var fun = mathparser.parse(calculator.answer.value);
-        var result = fun({
-            sin: Math.sin,
-            cos: Math.cos,
-            sqrt: Math.sqrt
-        }, {});
 
-        //функция определения целое число или дробное (если целое то выводим его, если дробное, то применяем метод toFixed)
-        function isInteger(num) {
-            if (num / Math.floor(num) == 1) {
-            	
-                return num;
-            } else if (num == 0.30000000000000004) {
-            	
-                return num.toFixed(1);
-            } else {
-            	
-                return num;
-            }
-        }
-        var percentEq = calculator.answer.value = isInteger(result);
+			//  в переменную кладём полученный процент от введённого числа
+			var fun = mathparser.parse(calculator.answer.value);
+			var result = fun({
+				sin: Math.sin,
+				cos: Math.cos,
+				sqrt: Math.sqrt
+			}, {});
 
-       
+			//функция определения целое число или дробное (если целое то выводим его, если дробное, то применяем метод toFixed)
+			// function isInteger(num) {
+			//     if (num / Math.floor(num) == 1) {
+			// 	return num;
+			//     } else if (num == 0.30000000000000004) {
+			//
+			//         return num.toFixed(1);
+			//     } else {
+			//
+			//         return num;
+			//     }
+			// }
+			var percentEq = calculator.answer.value = Math.round(result*10000000)/10000000;
 
-        // функция отображения истории выражений при вычислении процентов
 
-        function showHistoryExpressionPercent() {
 
-            var allHistoryExpression = document.createElement('div');
+			// функция отображения истории выражений при вычислении процентов
 
-            var introducedExpression = calculator.answer.value;
-            var expression = {};  
+			function showHistoryExpressionPercent() {
 
-            var form = document.querySelector('.historyListWrap');
-      		 var first= form.firstChild;
+				var allHistoryExpression = document.createElement('div');
 
-            expression.introducedExpression = injectedarray;
+				var introducedExpression = calculator.answer.value;
+				var expression = {};
 
-            allHistoryExpression.setAttribute('class', 'historyList anim col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3');
+				var form = document.querySelector('.historyListWrap');
+				var first= form.firstChild;
 
-            // Вставляем div с добавленными классами в html, и добавляем в него нужную разметку в которую выводим результаты  
-            allHistoryExpression.innerHTML = '<p>' + 'Выражение : ' + '<span>' + expression.introducedExpression + '%' + '</span>' +
-                '</p>' + '<p>' + parse(injectedarray)[2] + ' % от ' + parse(injectedarray)[0].replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + ' = ' + '<span>' + numberWithCommas(percentEq) + '</span>' + '</p>';
+				expression.introducedExpression = injectedarray;
 
-            form.insertBefore(allHistoryExpression, first);
+				allHistoryExpression.setAttribute('class', 'historyList anim col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3');
 
-        }
-        // вызов функции пересчёта процентов
+				// Вставляем div с добавленными классами в html, и добавляем в него нужную разметку в которую выводим результаты
+				allHistoryExpression.innerHTML = '<p>' + 'Выражение : ' + '<span>' + expression.introducedExpression + '%' + '</span>' +
+					'</p>' + '<p>' + parse(injectedarray)[2] + ' % от ' + parse(injectedarray)[0].replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ') + ' = ' + '<span>' + numberWithCommas(percentEq) + '</span>' + '</p>';
 
-        showHistoryExpressionPercent();
+				form.insertBefore(allHistoryExpression, first);
 
-        // подставляем изначально введённые значения, но убираем последнее значение (к примеру a+b% вот мы оставляем первое число+оператор арифметический ), вместо b  подставляем высчитанный процент от числа (calculator.answer.value, уже подсчитанный процент)
+			}
+			// вызов функции пересчёта процентов
 
-        calculator.answer.value = parse(injectedarray)[0] + ' ' + parse(injectedarray)[1] + ' ' + calculator.answer.value;
+			showHistoryExpressionPercent();
 
+			// подставляем изначально введённые значения, но убираем последнее значение (к примеру a+b% вот мы оставляем первое число+оператор арифметический ), вместо b  подставляем высчитанный процент от числа (calculator.answer.value, уже подсчитанный процент)
+
+			calculator.answer.value = parse(injectedarray)[0] + ' ' + parse(injectedarray)[1] + ' ' + calculator.answer.value;
+
+
+		}
 
 
     });
@@ -420,7 +398,6 @@ $(window).ready(function() {
         var elem = document.querySelectorAll(".historyList");
         // цикл проверяет все элементы с классом historyList 
         for (var i = 0; i < elem.length; i++) {
-
             elem[i].remove(); // и потом удаляет их
 
         }
@@ -447,22 +424,7 @@ $(window).ready(function() {
                 sqrt: Math.sqrt
             }, {});
 
-            //функция определения целое число или дробное (если целое то выводим его, если дробное, то применяем метод toFixed)
-
-            function isInteger(num) {
-                if (num / Math.floor(num) == 1) {
-            	
-                return num;
-            } else if (num == 0.30000000000000004) {
-            	
-                return num.toFixed(1);
-            } else {
-            	
-                return num;
-            }
-            }
-
-            calculator.answer.value = isInteger(result);
+            calculator.answer.value = Math.round(result*10000000)/10000000;
 
         }
 
@@ -490,24 +452,11 @@ $(window).ready(function() {
             sqrt: Math.sqrt
         }, {});
 
-        //функция определения целое число или дробное (если целое то выводим его, если дробное, то применяем метод toFixed)
-        function isInteger(num) {
-            if (num / Math.floor(num) == 1) {
-            	
-                return num;
-            } else if (num == 0.30000000000000004) {
-            	
-                return num.toFixed(1);
-            } else {
-            	
-                return num;
-            }
-        }
 
 
         expression.introducedExpression = calculator.answer.value;
 
-        calculator.answer.value = isInteger(result);
+        calculator.answer.value = Math.round(result*10000000)/10000000;
 
         
 

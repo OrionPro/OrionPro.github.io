@@ -17,6 +17,9 @@
 	.container {
         padding: 50px;
     }
+	.btn-wrap {
+		width: 80%;
+	}
 }
 @media only screen and (max-width: 568px) {
 	.container {
@@ -25,6 +28,9 @@
 	.form-control {
 		width: 100%;
 		font-size: 17px;
+	}
+	.btn-wrap {
+		width: 90%;
 	}
 }
 
@@ -43,6 +49,9 @@
 	.form-control {
 		height: 35px;
 		font-size: 13px;
+	}
+	.btn-wrap {
+		width: 90%;
 	}
 }
 

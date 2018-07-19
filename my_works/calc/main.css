@@ -30,7 +30,9 @@ body {
 }
 
 .calc_wrap h1 {
-    float: left;
+    width: 100%;
+    display: block;
+    text-align: left;
     margin-top: -27px;
     margin-bottom: 6px;
     font-size: 16px;
@@ -50,10 +52,26 @@ body {
     margin-top: 100px;
     margin-bottom: 200px;
 }
-
+#reset {
+    width: 100%;
+}
+#numArr {
+    width: 40%;
+}
+#num0 {
+    width: 40%;
+}
 .form_calc {
     padding: 30px;
     height: 365px;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     -moz-box-shadow: 6px -2px 13px rgb(17, 16, 16);
     ;
     /*FF 3.5+*/
@@ -82,18 +100,15 @@ body {
     background-color: #A6EA69;
     font-size: 23px;
 }
-
-.equally {
-    margin-top: 4px;
-    width: 18%;
+.btn-wrap {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
 }
-
-#numArr {
-    position: absolute;
-}
-
-#factorial {
-    position: absolute;
+.btn-wrap.btn-narrow{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .btn-default {
@@ -131,8 +146,17 @@ body {
 }
 
 .btn {
-    padding: 6px 12px;
-    font-size: 11px;
+    width: 20%;
+    height: 40px;
+    padding: 0 5px;
+    font-size: 16px;
+}
+.equally {
+    width: 20%;
+    height: 80px;
+    position: absolute;
+    top: -40px;
+    right: 0;
 }
 
 .historyList {

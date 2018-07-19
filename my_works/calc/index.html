@@ -27,33 +27,45 @@
                 <h1>Калькулятор на <span>JS</span></h1>
                 <input type="text" name="answer" id="input" class="form-control" value="0">
                 <br>
-                <input id="num1" type="button" class="btn btn-default" value="1" />
-                <input id="num2" type="button" class="btn btn-default" value="2" />
-                <input id="num3" type="button" class="btn btn-default" value="3" />
-                <input id="num+" type="button" class="btn btn-default" value="+" />
-                <input id="numArr" type="button" class="btn btn-default" value="←" />
-                <br>
-                <input id="num4" type="button" class="btn btn-default" value="4" />
-                <input id="num5" type="button" class="btn btn-default" value="5" />
-                <input id="num6" type="button" class="btn btn-default" value="6" />
-                <input id="numMinus" type="button" class="btn btn-default" value="-" />
-                <input id="factorial" type="button" class="btn btn-default" value="!" />
-                <br>
-                <input id="num7" type="button" class="btn btn-default" value="7" />
-                <input id="num8" type="button" class="btn btn-default" value="8" />
-                <input id="num9" type="button" class="btn btn-default" value="9" />
-                <input id="num*" type="button" class="btn btn-default" value="*" />
-                <br>
-                <input id="numClear" type="button" class="btn btn-default" value="C" />
-                <input id="num0" type="button" class="btn btn-default" value="0" />
-                <input id="num." type="button" class="btn btn-default" value="." />
-                <input id="num/" type="button" class="btn btn-default" value="/" />
-                <br>
-                <input id="num_equally" type="button" class="btn btn-default equally" value="=" />
-                <input id="percent" type="button" class="btn btn-default" value="%" />
-                <input id="sqrt" type="button" class="btn btn-default" value="√" />
-                <br>
-                <input id="reset" type="button" class="btn btn-default" value="Сброс истории выражений" />
+                <div class="btn-wrap">
+
+                    <input id="numArr" type="button" class="btn btn-default" value="←" />
+                    <input id="numClear" type="button" class="btn btn-default" value="C" />
+                    <input id="negate" type="button" class="btn btn-default" value="+-" />
+                    <input id="sqrt" type="button" class="btn btn-default" value="√" />
+                </div>
+                <div class="btn-wrap">
+                    <input id="num7" type="button" class="btn btn-default" value="7" />
+                    <input id="num8" type="button" class="btn btn-default" value="8" />
+                    <input id="num9" type="button" class="btn btn-default" value="9" />
+                    <input id="num/" type="button" class="btn btn-default" value="/" />
+                    <input id="percent" type="button" class="btn btn-default" value="%" />
+                </div>
+                <div class="btn-wrap">
+                    <input id="num4" type="button" class="btn btn-default" value="4" />
+                    <input id="num5" type="button" class="btn btn-default" value="5" />
+                    <input id="num6" type="button" class="btn btn-default" value="6" />
+                    <input id="num*" type="button" class="btn btn-default" value="*" />
+                    <input id="factorial" type="button" class="btn btn-default" value="!" />
+                </div>
+                <div class="btn-wrap btn-narrow">
+                    <input id="num1" type="button" class="btn btn-default" value="1" />
+                    <input id="num2" type="button" class="btn btn-default" value="2" />
+                    <input id="num3" type="button" class="btn btn-default" value="3" />
+                    <input id="numMinus" type="button" class="btn btn-default" value="-" />
+
+                </div>
+                <div class="btn-wrap btn-narrow">
+                    <input id="num0" type="button" class="btn btn-default" value="0" />
+                    <input id="num." type="button" class="btn btn-default" value="." />
+                    <input id="num+" type="button" class="btn btn-default" value="+" />
+                    <input id="num_equally" type="button" class="btn btn-default equally" value="=" />
+                </div>
+                <div class="btn-wrap">
+                    <input id="reset" type="button" class="btn btn-default" value="Сброс истории выражений" />
+
+                </div>
+
             </form>
             <div class="historyListWrap"></div>
         </div>
