@@ -204,19 +204,15 @@ $(window).ready(function() {
 
     });
 
-    // Удаляет последнюю введённую цифру
+    // Удаляет последнюю введённую цифру или оператор
 
     numArr.addEventListener('click', function() {
 
-        if (calculator.answer.value == calculator.answer.value.match(/\d/g))
-            calculator.answer.value = '0';
-        else if (calculator.answer.value == calculator.answer.value.match(/\-/g)) {
+        if (calculator.answer.value == calculator.answer.value.match(/\-?\d/g)) {
             calculator.answer.value = '0';
         } else {
             calculator.answer.value = calculator.answer.value.slice(0, -1);
         }
-
-
 
     });
 
